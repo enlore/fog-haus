@@ -37,6 +37,7 @@
           "wearables"
       ],
 
+      displayForm: false,
       hideButton: false,
       showName: false,
       showIndustry: false,
@@ -48,6 +49,7 @@
       sayHello: function sayHello () {
         this.showName = true;
         this.hideButton = true;
+        this.displayForm = true;
       },
 
       showNext: function showNext (ev) {

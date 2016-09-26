@@ -1,23 +1,19 @@
-$black = #131313
-$grey = #d8d8d8
+$black = #323b41
+$grey  = #94a4a6
 
 // Layout
 html, body
-  position fixed
-  top 0
-  bottom 0
-  left 0
-  right 0
   background-color $black
+  color $grey
+  font-family 'Open Sans', sans-serif
   //background-image url('/img/fog.png')
   //background-repeat no-repeat
   //background-position 50% -50%
   //background-size contain
 
 .callout
-  width 100%
-  color $grey
-  font-family 'Open Sans', sans-serif
+    margin-top 15%
+    margin-top 15vh
 
   a
     font-size 18px
@@ -33,8 +29,16 @@ html, body
 .hello-form .form-section.show
   visibility visible
 
+.form-body
+    display none
+    line-height 1.4em
+    padding-bottom 4rem
+
 .hide
   visibility hidden
+
+.display
+  display block
 
 // Typo
 h1
@@ -66,7 +70,7 @@ a, h1
 // Form
 input, select
   border 0
-  background-color black
+  background-color darken($black, 10%)
   font-size 22px
   padding 4px
   border-bottom 1px solid grey
@@ -81,6 +85,7 @@ input, select
 
 .group input
   display block
+  text-align left
 
 // Util
 .u-center-abs
