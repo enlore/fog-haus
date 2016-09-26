@@ -46,6 +46,9 @@
         label website
         input(type="text", v-model="contactWebsite")
 
+      .group.u-center-block
+        button(type="button", @click="submitForm") Submit
+
 script#custom-select(type="text/x-template")
   select(@change="onChange", v-model="selection")
     option(v-for="option in opts", v-bind:value="option") {{ option }}

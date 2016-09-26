@@ -72,6 +72,14 @@
       onSelect: function onSelect (arg) {
         console.info(arg);
         this.industry = arg;
+      },
+
+      submitForm: function submitForm () {
+        console.log("Form submitted")
+        this.showName     = false;
+        this.showIndustry = false;
+        this.showContact  = false;
+        this.showProduct  = false;
       }
     },
 
