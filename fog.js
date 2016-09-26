@@ -23,6 +23,7 @@
     data: {
       name: "",
       industry: "",
+
       productType: "",
       contactName: "",
       contactEmail: "",
@@ -80,6 +81,7 @@
         this.showIndustry = false;
         this.showContact  = false;
         this.showProduct  = false;
+        this.displayForm  = false;
       }
     },
 
