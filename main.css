@@ -1,0 +1,98 @@
+html,
+body {
+  background-color: #323b41;
+  color: #94a4a6;
+  font-family: 'Open Sans', sans-serif;
+}
+.callout {
+  margin-top: 15%;
+  margin-top: 15vh;
+}
+a {
+  font-size: 18px;
+}
+.hello-form {
+  margin-top: 1rem;
+  font-size: 22px;
+  max-width: 600px;
+}
+.hello-form .form-section {
+  visibility: hidden;
+}
+.hello-form .form-section.show {
+  visibility: visible;
+}
+.form-body {
+  display: none;
+  line-height: 1.4em;
+  padding-bottom: 4rem;
+}
+.hide {
+  visibility: hidden;
+}
+.display {
+  display: block;
+}
+h1 {
+  font-size: 66px;
+}
+a {
+  text-decoration: none;
+}
+a,
+h1 {
+  color: inherit;
+}
+.trans.opacity-in,
+.trans.opacity-out {
+  transition: opacity 2000ms ease;
+}
+.trans.opacity-in {
+  opacity: 0;
+}
+.trans.opacity-out {
+  opacity: 1;
+}
+.trans.hide {
+  opacity: 0;
+}
+.trans.show {
+  opacity: 1;
+}
+input,
+select {
+  border: 0;
+  background-color: #2d353b;
+  font-size: 22px;
+  padding: 4px;
+  border-bottom: 1px solid #808080;
+  border-radius: 0;
+  text-align: center;
+  color: #d3d3d3;
+}
+.group {
+  text-align: left;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+.group input {
+  display: block;
+  text-align: left;
+}
+.u-center-abs {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.u-center-block {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-text-left {
+  text-align: left;
+}
