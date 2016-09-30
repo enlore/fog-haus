@@ -10,6 +10,9 @@
     "styles": "stylus --watch main.styl",
     "serve": "python -m SimpleHTTPServer 3000"
   },
+  "engines": {
+    "node": ">= 6"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
