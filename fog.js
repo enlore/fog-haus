@@ -23,8 +23,8 @@
     data: {
       name: "",
       industry: "",
-
       productType: "",
+
       contactName: "",
       contactEmail: "",
       contactPhone: "",
@@ -72,7 +72,7 @@
 
       onSelect: function onSelect (arg) {
         console.info(arg);
-        this.industry = arg;
+        this.productType = arg;
       },
 
       submitForm: function submitForm () {
@@ -82,6 +82,26 @@
         this.showContact  = false;
         this.showProduct  = false;
         this.displayForm  = false;
+
+        var inquiry = {
+            company: this.name,
+            industry: this.industry,
+            product: this.productType,
+            name: this.contactName,
+            email: this.contactEmail,
+            phone: this.contactPhone,
+            website: this.contactWebsite
+        }
+
+        fetch("/inquiry", {
+            method: "post",
+            headers: new Headers({ "content-type": "application/json" }),
+            body: JSON.stringify(inquiry)
+        }).then(function (resp) {
+            console.info(resp)
+        }).catch(function (err) {
+            console.error(err)
+        })
       }
     },
 

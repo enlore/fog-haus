@@ -22,6 +22,9 @@
     "stylus": "^0.54.5"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "nodemailer": "^2.6.4",
+    "superagent": "^2.3.0"
   }
 }
