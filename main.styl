@@ -3,13 +3,26 @@ $grey  = #94a4a6
 
 // Layout
 html, body
-  background-color $black
+  //background-color $black
   color $grey
   font-family 'Open Sans', sans-serif
   //background-image url('/img/fog.png')
   //background-repeat no-repeat
   //background-position 50% -50%
   //background-size contain
+
+.bg-grad
+    position fixed
+    z-index -1000
+    top 0
+    left 0
+    bottom 0
+    right 0
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#323b41+0,323b41+85,5c6063+100&1+62,0.78+100 */
+    background: -moz-linear-gradient(top,  rgba(50,59,65,1) 0%, rgba(50,59,65,1) 62%, rgba(50,59,65,0.87) 85%, rgba(92,96,99,0.78) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(50,59,65,1) 0%,rgba(50,59,65,1) 62%,rgba(50,59,65,0.87) 85%,rgba(92,96,99,0.78) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(50,59,65,1) 0%,rgba(50,59,65,1) 62%,rgba(50,59,65,0.87) 85%,rgba(92,96,99,0.78) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323b41', endColorstr='#c75c6063',GradientType=0  ); /* IE6-9 */
 
 .callout
     margin-top 15%
