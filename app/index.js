@@ -36,7 +36,7 @@ let staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
 if (process.env.NODE_ENV === "production")
     staticDir = "/app/dist"
 
-fs.readdir(staticDir, (err, dir) => {
+fs.readdir("/app", (err, dir) => {
     if (err) console.error(err)
     else console.info(dir)
 })
