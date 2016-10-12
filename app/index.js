@@ -1,5 +1,6 @@
 "use strict"
 
+const fs = require("fs")
 const path = require("path")
 
 if (process.env.NODE_ENV !== "production")
@@ -31,6 +32,11 @@ app.use("/", (req, res, next) => {
 })
 
 const staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
+
+fs.readdir(staticDir, (err, dir) => {
+    if (err) console.error(err)
+    else console.info(dir)
+})
 
 app.use(express.static(staticDir))
 
