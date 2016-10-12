@@ -19,10 +19,9 @@ const MailGun = require("./mg")
 const MGEmail = require("./mgEmail")
 
 const mailer = new MailGun({
-    domain: "fog.haus",
-    apiKey: "key-1le00ub2z3uc8onmlmnk2sdph6-484v5"
+    domain: process.env.MG_DOMAIN,
+    apiKey: process.env.MG_KEY
 })
-
 
 app.use(bodyParser.json())
 
