@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel cp_assets client html styles serve",
-    "build": "build.sh",
+    "build": "sh ./build.sh",
     "cp_assets": "cp -r lib/* dev",
     "html": "pug -O data.json --pretty --watch src/index.pug --out dev",
     "client": "cp src/*.js dev",
