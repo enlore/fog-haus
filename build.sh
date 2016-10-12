@@ -1,6 +1,6 @@
 #! env bash
 echo "Build started"
-if [[ ! -f dist ]]; then
+if [[ ! -d dist ]]; then
     mkdir dist
 fi
 cp -v src/*.js dist;
