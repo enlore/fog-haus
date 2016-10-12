@@ -30,7 +30,9 @@ app.use("/", (req, res, next) => {
     next()
 })
 
-app.use(express.static(path.resolve(__dirname, "..", process.env.STATIC_DIR || "dev")))
+const staticDir = path.resolve(__dirname, "..", process.env.STATIC_DIR || "dev")
+
+app.use(express.static(staticDir))
 
 app.post("/inquiry", (req, res, next) => {
     const inquiry = {
@@ -69,4 +71,5 @@ app.use((err, req, res, next) => {
 
 app.listen(process.env.PORT || 3000, () => {
     console.info("Hey we're doin it")
+    console.info(`Serving static files from ${staticDir}`)
 })
