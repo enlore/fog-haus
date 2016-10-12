@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,700|Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono" rel="stylesheet">
   </head>
   <body>
     <header><img class="logo u-center-block" src="/img/logo_fog.svg"><a class="emailLink u-text-center" href="mailto:inquiries@fog.haus">inquiries at fog dot haus</a>
       <p class="bodyCopy introCopy u-text-center">
-        There’s an increasing trend in consumers and businesses looking for
-        sustainable, philanthropic and uplifting goods and services.
+        We see an increasing trend in consumers and businesses wanting
+        sustainable, philanthropic, and uplifting goods and services.
         
       </p><img class="arrowDown" src="/img/arrow-down.svg">
     </header>
@@ -24,73 +24,72 @@
       </p>
       <p class="bodyCopy">
         And we know that the demand will continue to grow. Why? We’re just like
-        you. We’re consumers and we’re business owners. We support social and
-        societal products and we build them too. We’ve helped companies launch,
-        grow and generate revenue while empowering their users to live and lead
+        you. We’re consumers and we’re business owners. We support socially
+        conscious products and we build them, too. We’ve helped companies
+        launch, grow, and generate revenue while empowering their users to live
         better lives.
         
       </p>
-      <p class="bodyCopy">
-        We started Fog to continue the practice of building more of those.
+      <p class="bodyCopy">We started <span style="color: white; font-family: Lora">fog</span> so we
+        could work together to build more of those.
         
       </p>
       <h2 class="callout">
-        “We’re just like you... consumers and business owners.”
+        “We’re just like you&hellip; consumers and business owners.”
         
       </h2>
       <p class="bodyCopy">
-        We’re experienced designers, advisors and creative technologists at
-        heart, on a mission to fuel startups that want to solve problems (big
-            and small!) in a profitable and sustainable way. 
+        We’re experienced designers, advisors, and creative technologists
+        on a mission to fuel startups that want to solve problems (big
+        and small) in a profitable and sustainable way. 
         
       </p>
     </section>
     <section class="section--altBg">
-      <div class="form">
-        <div class="hello-form u-center-block" id="hello-form">
-          <button class="trans opacity-out" @click="sayHello" :class="{'hide': hideButton}">say hello</button>
-          <div class="form-body" id="form-body" :class="{ 'display': displayForm }"><span class="trans opacity-in form-section" id="name-section" @input="_showIndustry" :class="{'show': showName}">You are 
-              <input type="text" v-model="name" placeholder="company name">
-              </span><span class="trans opacity-in form-section" id="industry-section" @input="_showProduct" :class="{'show': showIndustry}">
-              and you want to enhance your presence in the
-              
-              <input type="text" v-model="industry" placeholder="industry">
-              </span><span class="trans opacity-in form-section" id="product-section" @change="_showContact" :class="{'show': showProduct}">
-              industry with your
-              
-              <product-select v-on:select="onSelect" :opts="productTypes"></product-select>
-              product.
-              </span>
-            <div class="trans opacity-in form-section" id="contact-section" :class="{'show': showContact}">
-              <p class="u-text-left">Got it. Now who should we be in touch with?</p>
-              <div class="group u-center-block">
-                <label>name</label>
-                <input type="text" v-model="contactName">
-              </div>
-              <div class="group u-center-block">
-                <label>email</label>
-                <input type="text" v-model="contactEmail">
-              </div>
-              <div class="group u-center-block">
-                <label>phone</label>
-                <input type="text" v-model="contactPhone">
-              </div>
-              <div class="group u-center-block">
-                <label>website</label>
-                <input type="text" v-model="contactWebsite">
-              </div>
-              <div class="group u-center-block">
-                <button type="button" @click="submitForm">Submit</button>
-              </div>
+      <p class="bodyCopy">So, tell us about yourself.</p>
+      <div class="hello-form u-center-block" id="hello-form">
+        <button class="trans opacity-out" @click="sayHello" :class="{'hide': hideButton}">say hello</button>
+        <div class="form-body" id="form-body" :class="{ 'display': displayForm }"><span class="trans opacity-in form-section" id="name-section" @input="_showIndustry" :class="{'show': showName}">You are 
+            <input type="text" v-model="name" placeholder="company name">
+            </span><span class="trans opacity-in form-section" id="industry-section" @input="_showProduct" :class="{'show': showIndustry}">
+            and you want to enhance your presence in the
+            
+            <input type="text" v-model="industry" placeholder="industry">
+            </span><span class="trans opacity-in form-section" id="product-section" @change="_showContact" :class="{'show': showProduct}">
+            industry with your
+            
+            <product-select v-on:select="onSelect" :opts="productTypes"></product-select>
+            product.
+            </span>
+          <div class="trans opacity-in form-section" id="contact-section" :class="{'show': showContact}">
+            <p class="u-text-left">Got it. Now who should we be in touch with?</p>
+            <div class="group u-center-block">
+              <label>name</label>
+              <input type="text" v-model="contactName">
+            </div>
+            <div class="group u-center-block">
+              <label>email</label>
+              <input type="text" v-model="contactEmail">
+            </div>
+            <div class="group u-center-block">
+              <label>phone</label>
+              <input type="text" v-model="contactPhone">
+            </div>
+            <div class="group u-center-block">
+              <label>website</label>
+              <input type="text" v-model="contactWebsite">
+            </div>
+            <div class="group u-center-block">
+              <button type="button" @click="submitForm">Submit</button>
             </div>
           </div>
         </div>
-        <script id="custom-select" type="text/x-template">
-          <select @change="onChange" v-model="selection">
-            <option v-for="option in opts" v-bind:value="option">{{ option }}</option>
-          </select>
-        </script>
       </div>
+      <script id="custom-select" type="text/x-template">
+        <select @change="onChange" v-model="selection">
+          <option v-for="option in opts" v-bind:value="option">{{ option }}</option>
+        </select>
+      </script>
     </section>
     <script src="/vue.js"></script>
     <script src="fog.js"></script>

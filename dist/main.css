@@ -4,6 +4,14 @@
 h1 {
   font-size: 66px;
 }
+h3 {
+  font-size: 32px;
+}
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
 a {
   text-decoration: none;
 }
@@ -68,12 +76,12 @@ section {
   padding: 4.2rem 6rem;
   max-width: 728px;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 .hello-form {
   margin-top: 1rem;
   font-size: 22px;
-  max-width: 600px;
+  max-width: 468px;
 }
 .hello-form .form-section {
   visibility: hidden;
