@@ -31,7 +31,10 @@ app.use("/", (req, res, next) => {
     next()
 })
 
-const staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
+let staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
+
+if (process.env.NODE_ENV === "production")
+    staticDir = "/app/dist"
 
 fs.readdir(staticDir, (err, dir) => {
     if (err) console.error(err)
