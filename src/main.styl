@@ -1,23 +1,81 @@
+$olive = #465057
 $slate= #323b41
 $grey  = #94a4a6
+$neonTeal = #50E3C2
+$iceBlue = #D7F9F1
+$fadedGrey = #A5A8AB
+
+
+*
+    box-sizing border-box
+
+// Typo
+h1
+  font-size 66px
+
+a
+  text-decoration none
+
+a, h1
+  color inherit
+
+p, span, label
+  font-size 28px
+  font-weight 300
 
 // Layout
 html, body
   background-color $slate
-  color $grey
+  color $iceBlue
   font-family 'Hind', 'Open Sans', sans-serif
   font-size 1em
+  line-height 1.25
+  padding 0
+  margin 0
 
-.callout
+header
     margin-top 15%
     margin-top 15vh
+    padding-bottom 6rem
 
-  a
-    font-size 1.1rem
+section
+    background-color $olive
+    padding-top 6rem
+    padding-bottom 6rem
 
-.intro
-  max-width 400px
-  max-width 40vw
+.logo
+  width 400px
+
+.emailLink
+    color $fadedGrey
+    font-family "Space Mono", monospace
+    display block
+    font-size 22px
+    margin-top 2rem
+
+.arrowDown
+    display block
+    margin 0 auto
+    margin-top 5rem
+
+.bodyCopy
+  max-width 468px
+  margin-left auto
+  margin-right auto
+  font-weight 300
+
+.introCopy
+    margin-top 4rem
+    max-width 600px
+
+.callout
+    margin 4rem auto
+    border 2px solid $neonTeal
+    padding 4.2rem 6rem
+    max-width 728px
+    font-weight 400
+    font-size 3rem
+
 
 .hello-form
   margin-top 1rem
@@ -40,19 +98,6 @@ html, body
 
 .display
   display block
-
-// Typo
-h1
-  font-size 66px
-
-a
-  text-decoration none
-
-a, h1
-  color inherit
-
-p
-  font-size 1rem
 
 // Transitions
 .trans.opacity-in,
