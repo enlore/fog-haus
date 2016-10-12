@@ -33,13 +33,21 @@ app.use("/", (req, res, next) => {
 
 let staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
 
-if (process.env.NODE_ENV === "production")
+if (process.env.NODE_ENV === "production") {
     staticDir = "/app/dist"
 
-fs.readdir("/app", (err, dir) => {
-    if (err) console.error(err)
-    else console.info(dir)
-})
+    fs.readdir("/app", (err, dir) => {
+        if (err) console.error(err)
+        else console.info(dir)
+
+        if (dir.indexOf("dir") !== -1) {
+            fs.readDir("/app/dir", (err, dir) => {
+                if (err) console.error(err)
+                else console.info(dir)
+            })
+        }
+    })
+}
 
 app.use(express.static(staticDir))
 
