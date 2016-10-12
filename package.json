@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel cp_assets client html styles serve",
-    "build": "",
+    "build": "build.sh",
     "cp_assets": "cp -r lib/* dev",
     "html": "pug -O data.json --pretty --watch src/index.pug --out dev",
     "client": "cp src/*.js dev",
     "styles": "stylus --watch src/main.styl --out dev",
-    "serve": "nodemon app/index.js"
+    "serve": "nodemon app/index.js",
+    "postinstall": "build.sh"
   },
   "engines": {
     "node": ">= 6"
