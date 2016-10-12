@@ -2,6 +2,9 @@
 
 const path = require("path")
 
+if (process.env.NODE_ENV !== "production")
+    require("dotenv").config()
+
 const config = {
     fromAddress: "Fog Concierge <concierge@fog.haus>",
     to: "inquiries@fog.haus, ameer@fog.haus, alex@fog.haus, n.e.lorenson@gmail.com",
