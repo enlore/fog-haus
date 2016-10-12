@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm-run-all --parallel html styles serve",
-    "html": "pug -O data.json --pretty --watch index.pug -o .",
-    "styles": "stylus --watch main.styl",
-    "serve": "python -m SimpleHTTPServer 3000"
+    "dev": "npm-run-all --parallel cp_assets client html styles serve",
+    "build": "",
+    "cp_assets": "cp -r lib/* dev",
+    "html": "pug -O data.json --pretty --watch src/index.pug --out dev",
+    "client": "cp src/*.js dev",
+    "styles": "stylus --watch src/main.styl --out dev",
+    "serve": "nodemon app/index.js"
   },
   "engines": {
     "node": ">= 6"
@@ -24,6 +27,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "http-server": "^0.9.0",
     "nodemailer": "^2.6.4",
     "superagent": "^2.3.0"
   }
