@@ -12,7 +12,7 @@
     "client": "cp src/*.js dev",
     "styles": "stylus --watch src/main.styl --out dev",
     "serve": "nodemon app/index.js",
-    "postinstall": "./build.sh"
+    "postinstall": "sh ./build.sh"
   },
   "engines": {
     "node": ">= 6"
