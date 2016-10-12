@@ -1,0 +1,54 @@
+#hello-form.hello-form.u-center-block
+  button.trans.opacity-out(
+    @click="sayHello", :class="{'hide': hideButton}"
+  ) say hello
+
+  #form-body.form-body( :class="{ 'display': displayForm }")
+    span#name-section.trans.opacity-in.form-section(
+      @input="_showIndustry",
+      :class="{'show': showName}"
+    ).
+      You are #[input(type="text", v-model="name", placeholder="company name")]
+
+    span#industry-section.trans.opacity-in.form-section(
+      @input="_showProduct",
+      :class="{'show': showIndustry}"
+    ).
+      and you want to enhance your presence in the
+      #[input(type="text", v-model="industry", placeholder="industry")]
+
+    span#product-section.trans.opacity-in.form-section(
+      @change="_showContact",
+      :class="{'show': showProduct}"
+    ).
+      industry with your
+      #[product-select(v-on:select="onSelect", :opts="productTypes")]
+      product.
+
+    #contact-section.trans.opacity-in.form-section(
+      :class="{'show': showContact}"
+    )
+      p.u-text-left Got it. Now who should we be in touch with?
+
+      .group.u-center-block
+        label name
+        input(type="text", v-model="contactName")
+
+      .group.u-center-block
+        label email
+        input(type="text", v-model="contactEmail")
+
+      .group.u-center-block
+        label phone
+        input(type="text", v-model="contactPhone")
+
+      .group.u-center-block
+        label website
+        input(type="text", v-model="contactWebsite")
+
+      .group.u-center-block
+        button(type="button", @click="submitForm") Submit
+
+script#custom-select(type="text/x-template")
+  select(@change="onChange", v-model="selection")
+    option(v-for="option in opts", v-bind:value="option") {{ option }}
