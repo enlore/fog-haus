@@ -33,6 +33,11 @@ app.use("/", (req, res, next) => {
 
 let staticDir = path.resolve(process.cwd(), process.env.STATIC_DIR || "dev")
 
+fs.readdir(staticDir, (err, files) => {
+    if (err) console.error(err)
+    else console.info(files)
+})
+
 app.use(express.static(staticDir))
 
 app.post("/inquiry", (req, res, next) => {
