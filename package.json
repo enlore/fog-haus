@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "npm-run-all --parallel cp_assets client html styles serve",
     "build": "sh ./build.sh",
-    "cp_assets": "cp -r lib/* dev",
+    "cp_assets": "watch 'cp -r lib/* dev' lib",
     "html": "pug -O data.json --pretty --watch src/pages --out dev",
-    "client": "cp src/*.js dev",
+    "client": "watch 'cp -v src/js/*.js dev/js' ./src/js",
     "styles": "stylus --watch src/main.styl --out dev/css",
-    "serve": "nodemon app/index.js",
+    "serve": "nodemon -w app app/index.js",
     "postinstall": "sh ./build.sh"
   },
   "engines": {
@@ -22,7 +22,8 @@
   "devDependencies": {
     "npm-run-all": "^3.1.0",
     "pug": "^2.0.0-beta6",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "watch": "^1.0.1"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
