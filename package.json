@@ -7,7 +7,7 @@
     "dev": "npm-run-all --parallel cp_assets client html styles serve",
     "build": "sh ./build.sh",
     "cp_assets": "cp -r lib/* dev",
-    "html": "pug -O data.json --pretty --watch src/index.pug --out dev",
+    "html": "pug -O data.json --pretty --watch src/pages --out dev",
     "client": "cp src/*.js dev",
     "styles": "stylus --watch src/main.styl --out dev",
     "serve": "nodemon app/index.js",
