@@ -9,7 +9,7 @@
     "cp_assets": "cp -r lib/* dev",
     "html": "pug -O data.json --pretty --watch src/pages --out dev",
     "client": "cp src/*.js dev",
-    "styles": "stylus --watch src/main.styl --out dev",
+    "styles": "stylus --watch src/main.styl --out dev/css",
     "serve": "nodemon app/index.js",
     "postinstall": "sh ./build.sh"
   },
