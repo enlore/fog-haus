@@ -12,8 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono" rel="stylesheet">
   </head>
   <body>
-    <div id="transitionManagerContainer">
-      <h1>missives</h1>
+    <div id="transitionManagerContainer" @scroll="onScroll">
+      <div id="loading" :style="{'display': contentReady ? 'none' : 'block'}"><img src="/img/ring.svg" style="position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%)"></div>
+      <div id="content" style="display: none; opacity: 0" :style="{'display': contentReady ? 'block' : 'none'}">
+        <h1>missives</h1>
+      </div>
     </div>
     <script id="hello-form" type="text/x-template">
       <div class="hello-form u-center-block">
@@ -60,6 +63,7 @@
         <option v-for="option in opts" v-bind:value="option">{{ option }}</option>
       </select>
     </script>
+    <script src="/js/lodash.js"></script>
     <script src="/js/vue.js"></script>
     <script src="/js/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>

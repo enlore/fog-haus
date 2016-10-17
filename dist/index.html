@@ -12,85 +12,88 @@
     <link href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono" rel="stylesheet">
   </head>
   <body>
-    <div id="transitionManagerContainer">
-      <header><img class="logo u-center-block" src="/img/logo_fog.svg"><a class="emailLink u-text-center" href="mailto:inquiries@fog.haus">inquiries at fog dot haus</a>
-        <p class="bodyCopy introCopy u-text-center">
-          We see an increasing trend in consumers and businesses wanting
-          sustainable, philanthropic, and uplifting goods and services.
-          
-        </p><img class="arrowDown" src="/img/arrow-down.svg" @click="arrowClick">
-      </header>
-      <section id="we-like-that" @click="showStuff">
-        <h2 class="bodyCopy trans fade-in-up" :class="{ &quot;show&quot;: isOnScreen }">We <span class="bodyCopy--popped">like</span> that.
-          
-        </h2>
-        <p class="bodyCopy">
-          And we know that the demand will continue to grow. Why? We’re just like
-          you. We’re consumers and we’re business owners. We support socially
-          conscious products and we build them, too. We’ve helped companies
-          launch, grow, and generate revenue while empowering their users to live
-          better lives.
-          
-        </p>
-        <p class="bodyCopy">We started <span style="color: white; font-family: Lora">fog</span> so we
-          could work together to build more of those.
-          
-        </p>
-        <h2 class="callout">
-          “We’re just like you&hellip; consumers and business owners.”
-          
-        </h2>
-        <p class="bodyCopy">
-          We’re experienced designers, advisors, and creative technologists
-          on a mission to fuel startups that want to solve problems (big
-          and small) in a profitable and sustainable way. 
-          
-        </p>
-      </section>
-      <section class="section--altBg">
-        <h3 class="u-text-center section-title">We have three core tenets.</h3>
-        <div class="cardWrap">
-          <div class="row">
-            <div class="four columns">
-              <div class="card">
-                <h3 class="card-title">Empowerment</h3>
-                <p class="card-copy bodyCopy--small">
-                  New cloud and mobile technologies are driving a digital
-                  democratization as broadly accessible solutions emerge across
-                  education.
-                  
-                </p>
+    <div id="transitionManagerContainer" @scroll="onScroll">
+      <div id="loading" :style="{'display': contentReady ? 'none' : 'block'}"><img src="/img/ring.svg" style="position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%)"></div>
+      <div id="content" style="display: none; opacity: 0" :style="{'display': contentReady ? 'block' : 'none'}">
+        <header><img class="logo u-center-block" src="/img/logo_fog.svg"><a class="emailLink u-text-center" href="mailto:inquiries@fog.haus">inquiries at fog dot haus</a>
+          <p class="bodyCopy introCopy u-text-center">
+            We see an increasing trend in consumers and businesses wanting
+            sustainable, philanthropic, and uplifting goods and services.
+            
+          </p><img class="arrowDown" src="/img/arrow-down.svg" @click="arrowClick">
+        </header>
+        <section id="we-like-that" @click="showStuff">
+          <h2 class="bodyCopy trans fade-in-up" :class="{ &quot;show&quot;: isOnScreen }">We <span class="bodyCopy--popped">like</span> that.
+            
+          </h2>
+          <p class="bodyCopy">
+            And we know that the demand will continue to grow. Why? We’re just like
+            you. We’re consumers and we’re business owners. We support socially
+            conscious products and we build them, too. We’ve helped companies
+            launch, grow, and generate revenue while empowering their users to live
+            better lives.
+            
+          </p>
+          <p class="bodyCopy">We started <span style="color: white; font-family: Lora">fog</span> so we
+            could work together to build more of those.
+            
+          </p>
+          <h2 class="callout">
+            “We’re just like you&hellip; consumers and business owners.”
+            
+          </h2>
+          <p class="bodyCopy">
+            We’re experienced designers, advisors, and creative technologists
+            on a mission to fuel startups that want to solve problems (big
+            and small) in a profitable and sustainable way. 
+            
+          </p>
+        </section>
+        <section class="section--altBg">
+          <h3 class="u-text-center section-title">We have three core tenets.</h3>
+          <div class="cardWrap">
+            <div class="row">
+              <div class="four columns">
+                <div class="card">
+                  <h3 class="card-title">Empowerment</h3>
+                  <p class="card-copy bodyCopy--small">
+                    New cloud and mobile technologies are driving a digital
+                    democratization as broadly accessible solutions emerge across
+                    education.
+                    
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="four columns">
-              <div class="card">
-                <h3 class="card-title">Social Good</h3>
-                <p class="card-copy bodyCopy--small">
-                  We’re on the hunt for startups that are pursuing massive improvements
-                  in human health, wellness, and performance across nutrition, fitness,
-                  and medicine.
-                  
-                </p>
+              <div class="four columns">
+                <div class="card">
+                  <h3 class="card-title">Social Good</h3>
+                  <p class="card-copy bodyCopy--small">
+                    We’re on the hunt for startups that are pursuing massive improvements
+                    in human health, wellness, and performance across nutrition, fitness,
+                    and medicine.
+                    
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="four columns">
-              <div class="card">
-                <h3 class="card-title">Sustainability</h3>
-                <p class="card-copy bodyCopy--small">
-                  We believe we can live in a world of abundance by unlocking new ways
-                  of generating, consuming, and re-purposing resources. 
-                  
-                  
-                </p>
+              <div class="four columns">
+                <div class="card">
+                  <h3 class="card-title">Sustainability</h3>
+                  <p class="card-copy bodyCopy--small">
+                    We believe we can live in a world of abundance by unlocking new ways
+                    of generating, consuming, and re-purposing resources. 
+                    
+                    
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <section class="section--altBg">
-          <p class="bodyCopy">So, tell us about yourself.</p>
-          <hello-form></hello-form>
+          <section class="section--altBg">
+            <p class="bodyCopy">So, tell us about yourself.</p>
+            <hello-form></hello-form>
+          </section>
         </section>
-      </section>
+      </div>
     </div>
     <script id="hello-form" type="text/x-template">
       <div class="hello-form u-center-block">
@@ -137,6 +140,7 @@
         <option v-for="option in opts" v-bind:value="option">{{ option }}</option>
       </select>
     </script>
+    <script src="/js/lodash.js"></script>
     <script src="/js/vue.js"></script>
     <script src="/js/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js"></script>
