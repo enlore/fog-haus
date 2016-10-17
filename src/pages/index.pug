@@ -11,8 +11,8 @@ block body
       img.arrowDown(src="/img/arrow-down.svg")
 
     section
-      p.bodyCopy.
-        We like that.
+      h2.bodyCopy.
+        We #[span.bodyCopy--popped like] that.
 
       p.bodyCopy.
         And we know that the demand will continue to grow. Why? We’re just like
@@ -34,6 +34,27 @@ block body
         and small) in a profitable and sustainable way. 
 
     section.section--altBg
+      h2 We have three core tenets.
+      .card
+        h3.card-title Empowerment
+        p.card-copy.bodyCopy--small.
+          New cloud and mobile technologies are driving a digital
+          democratization as broadly accessible solutions emerge across
+          education.
+
+      .card
+        h3.card-title Social Good
+        p.card-copy.bodyCopy--small.
+          We’re on the hunt for startups that are pursuing massive improvements
+          in human health, wellness, and performance across nutrition, fitness,
+          and medicine.
+
+      .card
+        h3.card-title Sustainability
+        p.card-copy.bodyCopy--small.
+          We believe we can live in a world of abundance by unlocking new ways
+          of generating, consuming, and re-purposing resources. 
+
       include ../includes/fog-form.pug
 
     script(src="/vue.js")

@@ -1,9 +1,14 @@
+$white = #ffffff
 $olive = #465057
 $slate= #323b41
 $grey  = #94a4a6
 $neonTeal = #50E3C2
 $iceBlue = #D7F9F1
 $fadedGrey = #A5A8AB
+$lighterGrey = #535F65
+$anotherGreyGreen = #465057
+
+@import "_card"
 
 
 *
@@ -13,11 +18,17 @@ $fadedGrey = #A5A8AB
 h1
   font-size 66px
 
+h2
+  font-size 52px
+
 h3
   font-size 32px
 
 h1, h2, h3
   font-weight 300
+
+span
+  font-size inherit
 
 a
   text-decoration none
@@ -25,14 +36,14 @@ a
 a, h1
   color inherit
 
-p, span, label
+p, label
   font-size 28px
   font-weight 300
 
 // Layout
 html, body
   background-color $slate
-  color $iceBlue
+  color $white
   font-family 'Hind', 'Open Sans', sans-serif
   font-size 1em
   line-height 1.25
@@ -48,6 +59,9 @@ section
     background-color $olive
     padding-top 6rem
     padding-bottom 6rem
+
+section.section--altBg
+  background-color $slate
 
 .logo
   width 400px
@@ -70,6 +84,11 @@ section
   margin-right auto
   font-weight 300
 
+.bodyCopy--popped
+    color $iceBlue
+
+.bodyCopy--small
+    font-size 20px
 .introCopy
     margin-top 4rem
     max-width 600px
@@ -77,10 +96,12 @@ section
 .callout
     margin 4rem auto
     border 2px solid $neonTeal
+    background-color $lighterGrey
     padding 4.2rem 6rem
     max-width 728px
     font-weight 400
     font-size 2.6rem
+    text-align center
 
 
 .hello-form
