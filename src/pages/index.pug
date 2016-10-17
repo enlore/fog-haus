@@ -10,8 +10,8 @@ block body
 
       img.arrowDown(src="/img/arrow-down.svg", @click="arrowClick")
 
-    section#we-like-that
-      h2.bodyCopy.
+    section#we-like-that(@click="showStuff")
+      h2.bodyCopy.trans.fade-in-up( :class='{ "show": isOnScreen }').
         We #[span.bodyCopy--popped like] that.
 
       p.bodyCopy.

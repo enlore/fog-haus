@@ -106,6 +106,16 @@ header
   display block
 
 // Transitions
+.trans.fade-in-up
+  transition top 300ms ease, opacity 300ms ease
+  top 30px
+  opacity 0
+  position relative
+
+.trans.fade-in-up.show
+  top 0
+  opacity 1
+
 .trans.opacity-in,
 .trans.opacity-out
   transition opacity 2000ms ease

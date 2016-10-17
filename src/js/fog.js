@@ -121,10 +121,14 @@
           interval: 2000,
           frame: 12,
           likeThatTop: 0,
-          likeThatEl: null
+          likeThatEl: null,
+          isOnScreen: false
       },
 
       created: function created () {
+      },
+
+      computed: {
       },
 
       components: {
@@ -132,8 +136,21 @@
       },
 
       methods: {
+          showStuff: function (ev) {
+              this.isOnScreen = true;
+          },
+
           arrowClick: function () {
-              TweenMax.to(window, 2, { scrollTo: "#we-like-that" });
+              let tl = new TimelineLite();
+
+              tl.to(window, 1, {
+                  scrollTo: "#we-like-that",
+                  ease: Sine.easeOut
+              });
+
+              tl.call(this.showStuff);
+
+              tl.play();
           },
       }
   });
