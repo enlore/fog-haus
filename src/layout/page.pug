@@ -11,7 +11,7 @@ html(class="no-js" lang="en-us")
     link(rel="stylesheet" href="/css/normalize.css")
     link(rel="stylesheet" href="/css/grid.css")
     link(rel="stylesheet" href="/css/main.css")
-    link(href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono", rel="stylesheet")
+    //link(href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono", rel="stylesheet")
     //-script(src="js/vendor/modernizr-2.8.3.min.js")
 
   body
@@ -79,6 +79,11 @@ html(class="no-js" lang="en-us")
       select(@change="onChange", v-model="selection")
         option(v-for="option in opts", v-bind:value="option") {{ option }}
 
+    script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js")
+    script.
+      WebFont.load({
+        google: { families: ["Lora", "Hind", "Space Mono"] }
+      })
     script(src="/js/lodash.js")
     script(src="/js/vue.js")
     script(src="/js/TweenMax.min.js")

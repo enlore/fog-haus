@@ -10,8 +10,8 @@ block body
 
       img.arrowDown(src="/img/arrow-down.svg", @click="arrowClick")
 
-    section#we-like-that(@click="showStuff")
-      h2.bodyCopy.trans.fade-in-up( :class='{ "show": isOnScreen }').
+    section#we-like-that(@click="_showWeLike")
+      h2.bodyCopy.trans.fade-in-up( :class='{ "show": showWeLike }').
         We #[span.bodyCopy--popped like] that.
 
       p.bodyCopy.
@@ -33,12 +33,12 @@ block body
         on a mission to fuel startups that want to solve problems (big
         and small) in a profitable and sustainable way. 
 
-    section.section--altBg
+    section.section--altBg#tenets
       h3.u-text-center.section-title We have three core tenets.
       .cardWrap
         .row
           .four.columns
-            .card
+            .card#card-empowerment
               h3.card-title Empowerment
               p.card-copy.bodyCopy--small.
                 New cloud and mobile technologies are driving a digital
@@ -46,7 +46,7 @@ block body
                 education.
 
           .four.columns
-            .card
+            .card#card-social-good
               h3.card-title Social Good
               p.card-copy.bodyCopy--small.
                 We’re on the hunt for startups that are pursuing massive improvements
@@ -54,7 +54,7 @@ block body
                 and medicine.
 
           .four.columns
-            .card
+            .card#card-sustainability
               h3.card-title Sustainability
               p.card-copy.bodyCopy--small.
                 We believe we can live in a world of abundance by unlocking new ways
