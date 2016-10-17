@@ -125,7 +125,8 @@
           frame: 12,
           likeThatTop: 0,
           likeThatEl: null,
-          isOnScreen: false,
+          showWeLike: false,
+          showTenets: false,
           weLike: null
       },
 
@@ -141,7 +142,8 @@
 
       mounted: function mounted () {
         this.weLike = document.getElementById("we-like-that");
-        setTimeout(this.onReady, 600);
+        this.tenets = document.getElementById("tenets");
+        setTimeout(this.onReady, 800);
       },
 
       computed: {
@@ -153,13 +155,21 @@
 
       methods: {
           onScroll: function (ev, arg) {
-              if (this.checkForOnScreen())
-                  this.showStuff();
+              if (this.isWeLikeOnScreen())
+                  this._showWeLike();
+
+              if (this.isTenetsOnScreen())
+                  this._showTenets();
           },
 
-          checkForOnScreen: function () {
+          isWeLikeOnScreen: function () {
               var offset = this.weLike.offsetTop;
               return window.scrollY >= (offset * 0.6);
+          },
+
+          isTenetsOnScreen: function () {
+              var offset = this.tenets.offsetTop;
+              return window.scrollY >= (offset * 0.95);
           },
 
           onReady: function () {
@@ -167,8 +177,27 @@
              TweenLite.to("#content", 0.5, { opacity: 1 });
           },
 
-          showStuff: function (ev) {
-              this.isOnScreen = true;
+          _showWeLike: function (ev) {
+              this.showWeLike = true;
+          },
+
+          _showTenets: function (ev) {
+              this.showTenets = true;
+
+              var cardOpts = {
+                  top: 0,
+                  opacity: 1,
+                  ease: Sine.easeOut
+              };
+
+              var dur = 0.60;
+
+              var tl = new TimelineLite();
+
+              tl.to("#card-empowerment",    dur, cardOpts);
+              tl.to("#card-social-good",    dur, cardOpts);
+              tl.to("#card-sustainability", dur, cardOpts);
+              tl.play();
           },
 
           arrowClick: function () {
@@ -179,7 +208,7 @@
                   ease: Sine.easeOut
               });
 
-              tl.call(this.showStuff);
+              tl.call(this._showWeLike);
 
               tl.play();
           },

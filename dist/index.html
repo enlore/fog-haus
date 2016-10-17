@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono" rel="stylesheet">
+    <!--link(href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono", rel="stylesheet")-->
   </head>
   <body>
     <div id="transitionManagerContainer" @scroll="onScroll">
@@ -22,8 +22,8 @@
             
           </p><img class="arrowDown" src="/img/arrow-down.svg" @click="arrowClick">
         </header>
-        <section id="we-like-that" @click="showStuff">
-          <h2 class="bodyCopy trans fade-in-up" :class="{ &quot;show&quot;: isOnScreen }">We <span class="bodyCopy--popped">like</span> that.
+        <section id="we-like-that" @click="_showWeLike">
+          <h2 class="bodyCopy trans fade-in-up" :class="{ &quot;show&quot;: showWeLike }">We <span class="bodyCopy--popped">like</span> that.
             
           </h2>
           <p class="bodyCopy">
@@ -49,12 +49,12 @@
             
           </p>
         </section>
-        <section class="section--altBg">
+        <section class="section--altBg" id="tenets">
           <h3 class="u-text-center section-title">We have three core tenets.</h3>
           <div class="cardWrap">
             <div class="row">
               <div class="four columns">
-                <div class="card">
+                <div class="card" id="card-empowerment">
                   <h3 class="card-title">Empowerment</h3>
                   <p class="card-copy bodyCopy--small">
                     New cloud and mobile technologies are driving a digital
@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="four columns">
-                <div class="card">
+                <div class="card" id="card-social-good">
                   <h3 class="card-title">Social Good</h3>
                   <p class="card-copy bodyCopy--small">
                     We’re on the hunt for startups that are pursuing massive improvements
@@ -76,7 +76,7 @@
                 </div>
               </div>
               <div class="four columns">
-                <div class="card">
+                <div class="card" id="card-sustainability">
                   <h3 class="card-title">Sustainability</h3>
                   <p class="card-copy bodyCopy--small">
                     We believe we can live in a world of abundance by unlocking new ways
@@ -139,6 +139,12 @@
       <select @change="onChange" v-model="selection">
         <option v-for="option in opts" v-bind:value="option">{{ option }}</option>
       </select>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Lora", "Hind", "Space Mono"] }
+      })
     </script>
     <script src="/js/lodash.js"></script>
     <script src="/js/vue.js"></script>

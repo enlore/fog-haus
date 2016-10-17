@@ -7,6 +7,9 @@
   border-bottom: 16px solid #50e3c2;
   max-width: 380px;
   min-height: 440px;
+  position: relative;
+  opacity: 0;
+  top: 40px;
 }
 .card-title {
   color: #d7f9f1;
