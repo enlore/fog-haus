@@ -19,32 +19,35 @@
 
   var form = {
     template: "#hello-form",
-    data: {
-      name: "",
-      industry: "",
-      productType: "",
 
-      contactName: "",
-      contactEmail: "",
-      contactPhone: "",
-      contactWebsite: "",
+    data: function () {
+      return {
+          name: "",
+          industry: "",
+          productType: "",
 
-      productTypes: [
-        "healthcare",
-        "legal",
-        "fintech",
-        "e-sports",
-        "wearables",
-        "startup",
-        "other"
-      ],
+          contactName: "",
+          contactEmail: "",
+          contactPhone: "",
+          contactWebsite: "",
 
-      displayForm: false,
-      hideButton: false,
-      showName: false,
-      showIndustry: false,
-      showProduct: false,
-      showContact: false
+          productTypes: [
+              "healthcare",
+              "legal",
+              "fintech",
+              "e-sports",
+              "wearables",
+              "startup",
+              "other"
+          ],
+
+          displayForm: false,
+          hideButton: false,
+          showName: false,
+          showIndustry: false,
+          showProduct: false,
+          showContact: false
+      };
     },
 
     methods: {
@@ -112,15 +115,44 @@
   };
 
   var transitionManager = new Vue({
-    el: "#transitionManagerContainer",
-    components: {
-      "hello-form": form
-    },
-    methods: {
-      arrowClick: function () {
-        console.info("woo")
+      el: "#transitionManagerContainer",
+
+      data: {
+          interval: 2000,
+          frame: 12,
+          likeThatTop: 0,
+          likeThatEl: null,
+          isOnScreen: false
+      },
+
+      created: function created () {
+      },
+
+      computed: {
+      },
+
+      components: {
+          "hello-form": form
+      },
+
+      methods: {
+          showStuff: function (ev) {
+              this.isOnScreen = true;
+          },
+
+          arrowClick: function () {
+              let tl = new TimelineLite();
+
+              tl.to(window, 1, {
+                  scrollTo: "#we-like-that",
+                  ease: Sine.easeOut
+              });
+
+              tl.call(this.showStuff);
+
+              tl.play();
+          },
       }
-    }
   });
 
 })(this);
