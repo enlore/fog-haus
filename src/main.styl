@@ -8,11 +8,14 @@ $fadedGrey = #A5A8AB
 $lighterGrey = #535F65
 $anotherGreyGreen = #465057
 
-@import "_card"
-
+$copyWidth = 468px
 
 *
     box-sizing border-box
+
+@import "_card"
+@import "_section"
+@import "_form"
 
 // Typo
 h1
@@ -55,14 +58,6 @@ header
     margin-top 15vh
     padding-bottom 6rem
 
-section
-    background-color $olive
-    padding-top 6rem
-    padding-bottom 6rem
-
-section.section--altBg
-  background-color $slate
-
 .logo
   width 400px
 
@@ -79,7 +74,7 @@ section.section--altBg
     margin-top 5rem
 
 .bodyCopy
-  max-width 468px
+  max-width $copyWidth
   margin-left auto
   margin-right auto
   font-weight 300
@@ -103,23 +98,6 @@ section.section--altBg
     font-size 2.6rem
     text-align center
 
-
-.hello-form
-  margin-top 1rem
-  font-size 22px
-  max-width 468px
-
-.hello-form .form-section
-  visibility hidden
-
-.hello-form .form-section.show
-  visibility visible
-
-.form-body
-    display none
-    line-height 1.4em
-    padding-bottom 4rem
-
 .hide
   visibility hidden
 
@@ -142,26 +120,6 @@ section.section--altBg
 
 .trans.show
   opacity 1
-
-// Form
-input, select
-  border 0
-  background-color darken($slate, 10%)
-  font-size 22px
-  padding 4px
-  border-bottom 1px solid grey
-  border-radius 0
-  text-align center
-  color lightgrey
-
-.group
-  text-align left
-  max-width 600px
-  margin-top 1rem
-
-.group input
-  display block
-  text-align left
 
 // Util
 .u-center-abs
