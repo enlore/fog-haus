@@ -1,4 +1,6 @@
 (function (window) {
+  'use strict';
+
   var CustomSelect = {
     template: "#custom-select",
 
@@ -118,14 +120,28 @@
       el: "#transitionManagerContainer",
 
       data: {
+          contentReady : false,
           interval: 2000,
           frame: 12,
           likeThatTop: 0,
           likeThatEl: null,
-          isOnScreen: false
+          isOnScreen: false,
+          weLike: null
       },
 
       created: function created () {
+          this.throttledOnScroll = _.throttle(this.onScroll, 40);
+
+          window.addEventListener('scroll', this.throttledOnScroll);
+      },
+
+      destroyed: function destroyed () {
+          window.removeEventListener('scroll', this.throttledOnScroll);
+      },
+
+      mounted: function mounted () {
+        this.weLike = document.getElementById("we-like-that");
+        setTimeout(this.onReady, 600);
       },
 
       computed: {
@@ -136,12 +152,27 @@
       },
 
       methods: {
+          onScroll: function (ev, arg) {
+              if (this.checkForOnScreen())
+                  this.showStuff();
+          },
+
+          checkForOnScreen: function () {
+              var offset = this.weLike.offsetTop;
+              return window.scrollY >= (offset * 0.6);
+          },
+
+          onReady: function () {
+             this.contentReady = true;
+             TweenLite.to("#content", 0.5, { opacity: 1 });
+          },
+
           showStuff: function (ev) {
               this.isOnScreen = true;
           },
 
           arrowClick: function () {
-              let tl = new TimelineLite();
+              var tl = new TimelineLite();
 
               tl.to(window, 1, {
                   scrollTo: "#we-like-that",
