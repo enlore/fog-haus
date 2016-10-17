@@ -115,17 +115,27 @@
   };
 
   var transitionManager = new Vue({
-    el: "#transitionManagerContainer",
+      el: "#transitionManagerContainer",
 
-    components: {
-      "hello-form": form
-    },
+      data: {
+          interval: 2000,
+          frame: 12,
+          likeThatTop: 0,
+          likeThatEl: null
+      },
 
-    methods: {
-      arrowClick: function () {
-        console.info("woo");
+      created: function created () {
+      },
+
+      components: {
+          "hello-form": form
+      },
+
+      methods: {
+          arrowClick: function () {
+              TweenMax.to(window, 2, { scrollTo: "#we-like-that" });
+          },
       }
-    }
   });
 
 })(this);
