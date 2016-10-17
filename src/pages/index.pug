@@ -8,7 +8,7 @@ block body
         We see an increasing trend in consumers and businesses wanting
         sustainable, philanthropic, and uplifting goods and services.
 
-      img.arrowDown(src="/img/arrow-down.svg")
+      img.arrowDown(src="/img/arrow-down.svg", @click="arrowClick")
 
     section
       h2.bodyCopy.
@@ -62,9 +62,3 @@ block body
 
 
       include ../includes/fog-form.pug
-
-    script(src="/vue.js")
-    script(src="fog.js")
-    // Google Analytics: change UA-XXXXX-Y to be your site's ID.
-    script  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date; ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-    script(src="https://www.google-analytics.com/analytics.js" async defer)

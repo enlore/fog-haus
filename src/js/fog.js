@@ -7,7 +7,7 @@
     data: function data () {
       return {
         selection: "",
-      }
+      };
     },
 
     methods: {
@@ -15,37 +15,39 @@
         this.$emit("select", this.selection);
       }
     }
-  }
+  };
 
-  var form = new Vue({
-    el: "#hello-form",
+  var form = {
+    template: "#hello-form",
 
-    data: {
-      name: "",
-      industry: "",
-      productType: "",
+    data: function () {
+      return {
+          name: "",
+          industry: "",
+          productType: "",
 
-      contactName: "",
-      contactEmail: "",
-      contactPhone: "",
-      contactWebsite: "",
+          contactName: "",
+          contactEmail: "",
+          contactPhone: "",
+          contactWebsite: "",
 
-      productTypes: [
-          "healthcare",
-          "legal",
-          "fintech",
-          "e-sports",
-          "wearables",
-          "startup",
-          "other"
-      ],
+          productTypes: [
+              "healthcare",
+              "legal",
+              "fintech",
+              "e-sports",
+              "wearables",
+              "startup",
+              "other"
+          ],
 
-      displayForm: false,
-      hideButton: false,
-      showName: false,
-      showIndustry: false,
-      showProduct: false,
-      showContact: false
+          displayForm: false,
+          hideButton: false,
+          showName: false,
+          showIndustry: false,
+          showProduct: false,
+          showContact: false
+      };
     },
 
     methods: {
@@ -86,23 +88,23 @@
         this.displayForm  = false;
 
         var inquiry = {
-            company: this.name,
-            industry: this.industry,
-            product: this.productType,
-            name: this.contactName,
-            email: this.contactEmail,
-            phone: this.contactPhone,
-            website: this.contactWebsite
+          company: this.name,
+          industry: this.industry,
+          product: this.productType,
+          name: this.contactName,
+          email: this.contactEmail,
+          phone: this.contactPhone,
+          website: this.contactWebsite
         }
 
         fetch("/inquiry", {
-            method: "post",
-            headers: new Headers({ "content-type": "application/json" }),
-            body: JSON.stringify(inquiry)
+          method: "post",
+          headers: new Headers({ "content-type": "application/json" }),
+          body: JSON.stringify(inquiry)
         }).then(function (resp) {
-            console.info(resp)
+          console.info(resp)
         }).catch(function (err) {
-            console.error(err)
+          console.error(err)
         })
       }
     },
@@ -110,5 +112,20 @@
     components: {
       "product-select": CustomSelect
     }
+  };
+
+  var transitionManager = new Vue({
+    el: "#transitionManagerContainer",
+
+    components: {
+      "hello-form": form
+    },
+
+    methods: {
+      arrowClick: function () {
+        console.info("woo");
+      }
+    }
   });
+
 })(this);
