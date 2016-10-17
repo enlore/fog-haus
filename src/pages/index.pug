@@ -1,18 +1,5 @@
-doctype html
-html(class="no-js" lang="en-us")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible" content="ie=edge")
-    title fog
-    meta(name="description" content="")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-
-    //-link(rel="apple-touch-icon" href="apple-touch-icon.png")
-    link(rel="stylesheet" href="/main.css")
-    link(href="https://fonts.googleapis.com/css?family=Lora|Hind:300,400,700|Space+Mono", rel="stylesheet")
-    //-script(src="js/vendor/modernizr-2.8.3.min.js")
-
-  body
+extends ../layout/page
+block body
     header
       img.logo.u-center-block(src="/img/logo_fog.svg")
       a.emailLink.u-text-center(href="mailto:inquiries@fog.haus") inquiries at fog dot haus
@@ -47,7 +34,7 @@ html(class="no-js" lang="en-us")
         and small) in a profitable and sustainable way. 
 
     section.section--altBg
-      include fog-form.pug
+      include ../includes/fog-form.pug
 
     script(src="/vue.js")
     script(src="fog.js")
