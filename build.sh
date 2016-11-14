@@ -9,8 +9,8 @@ fi
 mkdir dist
 
 echo "Copying over js, lib"
-cp -v src/js/*.js dist;
 cp -vr lib/* dist;
+cp -v src/js/*.js dist/js;
 
 echo "Transpiling stylus"
 npm run styles:prod
