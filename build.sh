@@ -2,7 +2,10 @@
 echo "Build started"
 
 echo "Resetting dist dir"
-rm -r dist
+if [[ -d dist ]]; then
+    rm -r dist
+fi
+
 mkdir dist
 
 echo "Copying over js, lib"
