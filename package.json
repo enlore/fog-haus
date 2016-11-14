@@ -8,8 +8,10 @@
     "build": "sh ./build.sh",
     "cp_assets": "watch 'cp -r lib/* dev' lib",
     "html": "pug -O data.json --pretty --watch src/pages --out dev",
+    "html:prod": "pug -O data.json src/pages/index.pug --out dist",
     "client": "watch 'cp -v src/js/*.js dev/js' ./src/js",
     "styles": "stylus --watch src/styl/main.styl --out dev/css",
+    "styles:prod": "stylus --out dist src/styl/main.styl",
     "serve": "nodemon -w app app/index.js",
     "postinstall": "bash ./build.sh"
   },
