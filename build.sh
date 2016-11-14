@@ -1,11 +1,9 @@
 #! env bash
 echo "Build started"
 
-if [[ -d dist ]]; then
-    echo "Deleteing dist dir"
-    rm -r dist
-    mkdir dist
-fi
+echo "Resetting dist dir"
+rm -r dist
+mkdir dist
 
 echo "Copying over js, lib"
 cp -v src/js/*.js dist;
