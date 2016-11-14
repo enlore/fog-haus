@@ -11,7 +11,7 @@
     "html:prod": "pug -O data.json src/pages/index.pug --out dist",
     "client": "watch 'cp -v src/js/*.js dev/js' ./src/js",
     "styles": "stylus --watch src/styl/main.styl --out dev/css",
-    "styles:prod": "stylus --out dist src/styl/main.styl",
+    "styles:prod": "stylus --out dist/css src/styl/main.styl",
     "serve": "nodemon -w app app/index.js",
     "postinstall": "bash ./build.sh"
   },
