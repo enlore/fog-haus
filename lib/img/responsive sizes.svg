@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="228px" height="330px" viewBox="0 0 228 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>responsive sizes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website-Change" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-304.000000, -3920.000000)">
+            <g id="responsive-sizes" transform="translate(304.000000, 3920.000000)">
+                <rect id="Rectangle-2" fill="#3D4951" x="0" y="0" width="228" height="141" rx="7"></rect>
+                <rect id="Rectangle-2" fill="#323B41" x="10" y="10" width="208" height="121" rx="7"></rect>
+                <rect id="Rectangle-2-Copy" fill="#3D4951" x="78" y="139" width="73" height="17" rx="7"></rect>
+                <polygon id="Triangle-2-Copy-5" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(114.145027, 72.573532) rotate(250.000000) translate(-114.145027, -72.573532) " points="106.276982 55.5999113 135.181918 86.4253762 93.1081352 89.5471527 108.771308 76.8127"></polygon>
+                <rect id="Rectangle-2" fill="#3D4951" x="29" y="202" width="101.369048" height="127.456522" rx="7"></rect>
+                <rect id="Rectangle-2" fill="#323B41" x="38" y="211" width="81.0952381" height="105.695652" rx="2"></rect>
+                <ellipse id="Oval-2-Copy" fill="#64737E" cx="78.1190476" cy="323.108696" rx="3.11904762" ry="3.10869565"></ellipse>
+                <rect id="Rectangle-2" fill="#3D4951" x="145" y="217" width="54.5833333" height="105.695652" rx="7"></rect>
+                <rect id="Rectangle-2" fill="#323B41" x="151" y="226" width="42.1071429" height="82.3804348" rx="2"></rect>
+                <ellipse id="Oval-2" fill="#64737E" cx="173.119048" cy="316.108696" rx="3.11904762" ry="3.10869565"></ellipse>
+                <polygon id="Triangle-2-Copy-6" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(79.141727, 265.542953) rotate(250.000000) translate(-79.141727, -265.542953) " points="74.6640164 255.915312 91.11384 273.399886 67.1696149 275.170595 76.0835394 267.94746"></polygon>
+                <polygon id="Triangle-2-Copy-7" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(172.735367, 266.346895) rotate(250.000000) translate(-172.735367, -266.346895) " points="170.781186 262.14516 177.960285 269.77585 167.510448 270.54863 171.4007 267.39628"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

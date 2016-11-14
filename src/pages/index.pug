@@ -1,64 +1,138 @@
 extends ../layout/page
 block body
     header
-      img.logo.u-center-block(src="/img/logo_fog.svg")
+      img.mastheadLogo.u-center-block(src="/img/logo_fog.svg")
       a.emailLink.u-text-center(href="mailto:inquiries@fog.haus") inquiries at fog dot haus
 
-      p.bodyCopy.introCopy.u-text-center.
-        We see an increasing trend in consumers and businesses wanting
-        sustainable, philanthropic, and uplifting goods and services.
+    section.container
+      p.bodyCopy.introStanzas.
+        Business is changing.
+        Sustainability and social
+        innovation are at the
+        forefront, and the era of
+        conglomerates is rapidly dying.
 
-      img.arrowDown(src="/img/arrow-down.svg", @click="arrowClick")
-
-    section#we-like-that(@click="_showWeLike")
-      h2.bodyCopy.trans.fade-in-up( :class='{ "show": showWeLike }').
-        We #[span.bodyCopy--popped like] that.
-
-      p.bodyCopy.
-        And we know that the demand will continue to grow. Why? We’re just like
-        you. We’re consumers and we’re business owners. We support socially
-        conscious products and we build them, too. We’ve helped companies
-        launch, grow, and generate revenue while empowering their users to live
-        better lives.
+    section.container
+      h2.bodyHeadline We like that.
 
       p.bodyCopy.
-        We started #[span(style="color: white; font-family: Lora;") fog] so we
-        could work together to build more of those.
+        At Fog, we realize the new consumer is more demanding and savvier than
+        big marketing companies will allude to. They want products with impact,
+        are forward thinking and culturally-relevant; we bridge that gap.
 
-      h2.callout.
-        “We’re just like you&hellip; consumers and business owners.”
+      .leftIndent
+        p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+          And we know that the demand will continue to grow. Why? We’re just like
+          you. We’re consumers and we’re business owners. We support social and
+          societal products and we build them too. We’ve helped companies and
+          cool individuals launch, grow and generate revenue while empowering
+          their users to live and lead better lives.
+
+        p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+          We started Fog to continue the practice of building more of those.
+
+        p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+          Here’s how we do it.
+
+    section.container
+      .service.row
+        .four.columns
+          img.serviceLogo(src="/img/tail.svg")
+
+        .eight.columns
+          h3.bodySubHeadline Idea Validation
+
+          p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+            Need an investor or applying for an accelerator to push & fund your
+            idea? We help you visualize your idea into a tangible design that
+            refines your concept, establishes business need, wireframes and art
+            direction.
+
+      .service.row
+        .four.columns
+          img.serviceLogo(src="/img/uplift.svg")
+
+        .eight.columns
+          h3.bodySubHeadline Venture Development
+
+          p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+            You’ve said to yourself, “This is it! I’ve got the idea that will
+            radically change ____” hold it right there. Before you spend an
+            exorbitant fee on getting your idea developed - think about the risk
+            involved. Don’t do that. Instead, partnering with us reduces your
+            initial risk by taking equity and sharing the burden of launching
+            a successful project with you. Best of all, you get a co-founder packed
+            with nearly a decade of startup expertise.
+
+      .service.row
+        .four.columns
+          img.serviceLogo(src="/img/wave.svg")
+
+        .eight.columns
+          h3.bodySubHeadline The Retainer
+
+          p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+            Sometimes you need some people on call when your needs are recurring
+            and unpredictable. You need design or development help ASAP? We got you
+            covered. As your partner, our flexible workflow helps bolster your
+            internal team or gives you the kick you need when outsourced.
+
+      .service.row
+        .four.columns
+          img.serviceLogo(src="/img/responsive-sizes.svg")
+
+        .eight.columns
+          h3.bodySubHeadline A Project
+
+          p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+            “I need a website”, “I need branding”, “I need an app…” we’ve heard
+            them all and we know how to help you. This is where we ask you a ton of
+            questions, figure out your goals, define the scope, develop & refine
+            a concept, design the hell out of it, and deploy it. You will be happy,
+            and your users will thank you. You’re welcome.
+
+    section.container
+      h3.bodyHeadline You like that? #[br] Get in touch.
 
       p.bodyCopy.
-        We’re experienced designers, advisors, and creative technologists
-        on a mission to fuel startups that want to solve problems (big
-        and small) in a profitable and sustainable way. 
+        Currently, we’re working on a few projects. If you like what you’ve
+        been reading, well, you ought to shoot us a line to get a conversation
+        started.
 
-    section.section--altBg#tenets
-      h3.u-text-center.section-title We have three core tenets.
-      .cardWrap
-        .row
-          .four.columns
-            .card#card-empowerment
-              h3.card-title Empowerment
-              p.card-copy.bodyCopy--small.
-                New cloud and mobile technologies are driving a digital
-                democratization as broadly accessible solutions emerge across
-                education.
+      p.bodyCopy.bodyCopy--small.bodyCopy--altColor.
+        fog.haus team #[br]
+        Nick Lorenson #[br]
+        Alexander Elliot #[br]
+        Ameer Suhayb Carter
 
-          .four.columns
-            .card#card-social-good
-              h3.card-title Social Good
-              p.card-copy.bodyCopy--small.
-                We’re on the hunt for startups that are pursuing massive improvements
-                in human health, wellness, and performance across nutrition, fitness,
-                and medicine.
+      p.bodyCopy.bodyCopy--small.
+        #[a(href="mailto:inquiries@fog.haus").emailLink.green Email us for questions ↗ ]
 
-          .four.columns
-            .card#card-sustainability
-              h3.card-title Sustainability
-              p.card-copy.bodyCopy--small.
-                We believe we can live in a world of abundance by unlocking new ways
-                of generating, consuming, and re-purposing resources. 
+      p.bodyCopy.bodyCopy--small.
+        or
 
+      p.bodyCopy.bodyCopy--small.
+        #[a(href="mailto:inquiries@fog.haus").emailLink.green agency services ↗ ]
 
-      include ../includes/fog-form.pug
+      p.copyright.bodyCopy.bodyCopy--small.
+        © 2016 Fog Haus Inc.
+
+    footer.container
+      h2.bodyHeadline By the way...
+
+      p.bodyCopy.
+        Ideas or no ideas, if you’re interested in journeying into
+        entrepreneurship with digital products, we can provide a few things
+        that might come in handy along the way.
+
+      p.bodyCopy.
+        Words
+
+      a.bodyCopy.green.
+        Thoughts on software, digital services and the new wave of business. ↗ 
+
+      p.bodyCopy.
+        Action
+
+      a.bodyCopy.green.
+        Thunder Canvas: Idea generation and validation tool. ↗ 

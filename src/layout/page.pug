@@ -3,9 +3,11 @@ html(class="no-js" lang="en-us")
   head
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
-    title fog
+    title fog.
     meta(name="description" content="")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    script(src="https://use.fontawesome.com/9f2cdf9ca8.js")
 
     //-link(rel="apple-touch-icon" href="apple-touch-icon.png")
     link(rel="stylesheet" href="/css/normalize.css")
@@ -15,80 +17,23 @@ html(class="no-js" lang="en-us")
     //-script(src="js/vendor/modernizr-2.8.3.min.js")
 
   body
-    #transitionManagerContainer(@scroll="onScroll")
-      #loading( :style="{'display': contentReady ? 'none' : 'block'}")
-        img(src='/img/ring.svg',
-          style="position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);")
-
-      #content(style="display: none; opacity: 0;", :style="{'display': contentReady ? 'block' : 'none'}")
-        block body
-
-    script#hello-form(type="text/x-template")
-      .hello-form.u-center-block
-        button.trans.opacity-out(
-          @click="sayHello", :class="{'hide': hideButton}"
-        ) say hello
-
-        #form-body.form-body( :class="{ 'display': displayForm }")
-          span#name-section.trans.opacity-in.form-section(
-            @input="_showIndustry",
-            :class="{'show': showName}"
-          ).
-            You are #[input(type="text", v-model="name", placeholder="company name")]
-
-          span#industry-section.trans.opacity-in.form-section(
-            @input="_showProduct",
-            :class="{'show': showIndustry}"
-          ).
-            and you want to enhance your presence in the
-            #[input(type="text", v-model="industry", placeholder="industry")]
-
-          span#product-section.trans.opacity-in.form-section(
-            @change="_showContact",
-            :class="{'show': showProduct}"
-          ).
-            industry with your
-            #[product-select(v-on:select="onSelect", :opts="productTypes")]
-            product.
-
-          #contact-section.trans.opacity-in.form-section(
-            :class="{'show': showContact}"
-          )
-            p.u-text-left Got it. Now who should we be in touch with?
-
-            .group.u-center-block
-              label name
-              input(type="text", v-model="contactName")
-
-            .group.u-center-block
-              label email
-              input(type="text", v-model="contactEmail")
-
-            .group.u-center-block
-              label phone
-              input(type="text", v-model="contactPhone")
-
-            .group.u-center-block
-              label website
-              input(type="text", v-model="contactWebsite")
-
-            .group.u-center-block
-              button(type="button", @click="submitForm") Submit
-
-    script#custom-select(type="text/x-template")
-      select(@change="onChange", v-model="selection")
-        option(v-for="option in opts", v-bind:value="option") {{ option }}
+    block body
 
     script(src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js")
+
     script.
       WebFont.load({
-        google: { families: ["Lora", "Hind", "Space Mono"] }
+        //google: { families: ["Lora", "Hind", "Space Mono"] }
+        google: { families: ["Space Mono"] }
       })
+
     script(src="/js/lodash.js")
     script(src="/js/vue.js")
     script(src="/js/TweenMax.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/ScrollToPlugin.min.js")
+
     script(src="/js/fog.js")
+
     // Google Analytics: change UA-XXXXX-Y to be your site's ID.
     script  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date; ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     script(src="https://www.google-analytics.com/analytics.js" async defer)

@@ -1,0 +1,46 @@
+// Layout
+html, body
+  background-color $fogSlate
+  color $fogWhite
+  //font-family 'Hind', 'Open Sans', sans-serif
+  font-family 'Space Mono', serif
+  font-size 1em
+  font-weight 300
+  line-height 1.25
+  padding 0
+  margin 0
+  background-image \
+    url('/img/fog-bg.png'),\
+    url('/img/dark-gradient-slice.png')
+
+  background-position 0 0, 0 100%
+  background-repeat  no-repeat, repeat-x
+
+header
+  padding 0 1rem 6rem
+
+  @media (min-width: 768px)
+    padding 0 0 6rem
+
+section
+  padding 6rem 1rem
+
+  @media (min-width: 768px)
+    padding 6rem 0
+
+footer
+  padding 288px 0
+
+.introStanzas
+  @media (min-width: 768px)
+    max-width 680px
+
+.leftIndent
+  max-width 680px
+
+  @media (min-width: 768px)
+    margin-left 76px
+
+.container
+  //override
+  max-width 960px
