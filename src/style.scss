@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+$fog-grey: #465057;
+
+$fog-lightGreen: #D7F9F1;
+$fog-green: #50E3C2;
+
+$white: #fff;
+$black: #000;
+
+#logoWrap {
+    opacity: 0.5;
+}
+
+#logo {
+    $top: 46%;
+    $right: 6%;
+    position: fixed;
+    width: 680px;
+    top: $top;
+    right: $right;
+    transform: translateY(-($top/2)) translateX(-($right/2));
+}
+
+html, body {
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-color: $fog-grey;
+    background-image: url('/dist/img/dark-gradient-slice.png');
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    //background-image: url('/img/fog-logo.svg')
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: 'Space Mono';
+}
+
+h1.font-alt {
+    font-family: 'Space Mono';
+}
+
+p {
+    font-weight: 300;
+    margin-top: 64px;
+}
+
+h1 { font-size: 55px; }
+h2 { font-size: 47.5px; }
+h3 { font-size: 40px; }
+p,
+li { font-size: 35px; }
+a  { font-size: 30px; }
+
+ul { list-style: none; }
+
+a {
+    color: $fog-green;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 { color: $white; }
+h1.alt { color: $fog-green; }
+
+h2 { color: $white; }
+h2.alt { color: $fog-green; }
+
+h3 { color: $white; }
+h3.alt { color: $fog-green; }
+
+.thin  { font-weight: 300; }
+.thick { font-weight: 400; }
+.fat { font-weight: 500; }
+
+$section-padding: 256px;
+
+section {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+}
+
+section.easterEgg {
+    padding-top: $section-padding * 2;
+}
+
+.copyColumn {
+    //padding-top: 20%;
+    padding-left: 16px;
+    padding-bottom: 128px;
+    max-width: 680px;
+}
+
+.serviceBlock:last-child {
+    padding-bottom: 0;
+}
+
+.serviceBlock {
+    padding-bottom: 128px;
+}
+
+.serviceIcon {
+    margin-bottom: 16px;
+}
+
+.u-centerBlock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-imgResp {
+    display: block;
+    max-width: 100%;
+}
+
+.u-textCenter {
+    text-align: center;
+}
