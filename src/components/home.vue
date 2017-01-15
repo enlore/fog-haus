@@ -32,7 +32,7 @@
 
             section
                 .serviceBlock
-                    img.serviceIcon.u-imgResp.u-centerBlock(src="/dist/img/tail.svg")
+                    img.serviceIcon.u-imgResp.u-centerBlock(src="/img/tail.svg")
                     h2.alt.u-textCenter.
                         Idea Validation
 
@@ -43,7 +43,7 @@
                         direction to help you make your pitch.
 
                 .serviceBlock
-                    img.serviceIcon.u-imgResp.u-centerBlock(src="/dist/img/uplift.svg")
+                    img.serviceIcon.u-imgResp.u-centerBlock(src="/img/uplift.svg")
                     h2.alt.u-textCenter.
                         Venture Development
 
@@ -57,7 +57,7 @@
 
 
                 .serviceBlock
-                    img.serviceIcon.u-imgResp.u-centerBlock(src="/dist/img/wave.svg")
+                    img.serviceIcon.u-imgResp.u-centerBlock(src="/img/wave.svg")
                     h2.alt.u-textCenter.
                         The Retainer
 
@@ -69,7 +69,7 @@
                         the extra kick you need when working with outsourced talent.
 
                 .serviceBlock
-                    img.serviceIcon.u-imgResp.u-centerBlock(src="/dist/img/responsive-sizes.svg")
+                    img.serviceIcon.u-imgResp.u-centerBlock(src="/img/responsive-sizes.svg")
                     h2.alt.u-textCenter.
                         Your Project
 
