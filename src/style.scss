@@ -47,14 +47,6 @@ $fog-green: #50E3C2;
 $white: #fff;
 $black: #000;
 
-//#logoWrap {
-    //opacity: 0.5;
-//}
-
-#logo {
-    opacity: 0.3;
-}
-
 @include keyframes(drift-fog) {
     $horizontalStart: -100%;
     $horizontalMid: 0px;
@@ -110,15 +102,48 @@ $black: #000;
     top: 34%;
 }
 
-.fogLogo {
-    $top: 46%;
-    $right: 6%;
+#logo {
+    opacity: 0.3;
+}
 
-    position: fixed;
-    width: 680px;
-    top: $top;
-    right: $right;
-    transform: translateY(-($top/2)) translateX(-($right/2));
+#logos {
+    padding: 32px 32px 0;
+}
+
+#logo {
+    display: none;
+}
+
+.fogLogo {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    #logos {
+        padding: 0;
+    }
+
+    #logo {
+        display: block;
+    }
+
+    .fogLogo {
+        $top: 46%;
+        $right: 2%;
+
+        position: fixed;
+        width: 490px;
+        top: $top;
+        right: $right;
+        transform: translateY(-($top/2)) translateX(-($right/2));
+    }
+}
+
+@media (min-width: 1430px) {
+    .fogLogo {
+        width: 680px;
+    }
 }
 
 html, body {
@@ -189,13 +214,24 @@ h3.alt { color: $fog-green; }
 $section-padding: 256px;
 
 section {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    padding-top: $section-padding / 2;
+    padding-bottom: $section-padding / 2;
 }
 
 section.lead {
-    padding-top: 356px;
-    //padding-top: 66%;
+    padding-top: 126px;
+}
+
+@media (min-width: 1200px) {
+    section {
+        padding-top: $section-padding;
+        padding-bottom: $section-padding;
+    }
+
+    section.lead {
+        padding-top: 356px;
+        //padding-top: 66%;
+    }
 }
 
 section.easterEgg {
@@ -205,6 +241,7 @@ section.easterEgg {
 .copyColumn {
     //padding-top: 20%;
     padding-left: 32px;
+    padding-right: 32px;
     padding-bottom: 128px;
     max-width: 680px;
 }

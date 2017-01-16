@@ -17,6 +17,33 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/build.css">
 
+    <style>
+        .pace {
+            -webkit-pointer-events: none;
+            pointer-events: none;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .pace-inactive {
+            display: none;
+        }
+
+        .pace .pace-progress {
+            background: #29d;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            right: 100%;
+            width: 100%;
+            height: 2px;
+        }
+    </style>
+
+    <script src="/js/pace.min.js" type="application/javascript"></script>
+
     <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
 
   </head>
@@ -33,6 +60,11 @@
       </p>
       <![endif]-->
 
+    <div id="logos">
+        <img id="logo" class="fogLogo" src="/img/fog-logo.svg" />
+        <img id="logo-green" class="fogLogo" src="/img/fog-logo.svg" />
+    </div>
+
     <div id="fogGroups">
         <img id="fog-1" class="fogGroup" src="/img/fog-group.png" />
         <img id="fog-2" class="fogGroup" src="/img/fog-group-2.png" />
@@ -41,12 +73,16 @@
 
     <div id="app"></div>
 
-    <div id="logos">
-        <img id="logo" class="fogLogo" src="/img/fog-logo.svg" />
-        <img id="logo-green" class="fogLogo" src="/img/fog-logo.svg" />
-    </div>
-
     <script type="application/javascript">
+        let things = document.querySelectorAll('*')
+
+        Array.prototype.forEach.call(things, function (thing) {
+            console.log(thing)
+            thing.onprogress = (ev) => {
+                console.info('progress event', ev)
+            }
+        })
+
         var logo = window['logo-green']
 
         window.onscroll = function (ev) {
@@ -57,6 +93,8 @@
 
             logo.style.opacity = op
         }
+
+        console.log('at the end here')
     </script>
 
     <!--<script src="/js/TweenMax.min.js"></script>-->
