@@ -47,8 +47,12 @@ $fog-green: #50E3C2;
 $white: #fff;
 $black: #000;
 
-#logoWrap {
-    opacity: 0.5;
+//#logoWrap {
+    //opacity: 0.5;
+//}
+
+#logo {
+    opacity: 0.3;
 }
 
 @include keyframes(drift-fog) {
@@ -106,7 +110,7 @@ $black: #000;
     top: 34%;
 }
 
-#logo {
+.fogLogo {
     $top: 46%;
     $right: 6%;
 

@@ -21,13 +21,27 @@
 
     <div id="app"></div>
 
-    <div id="logoWrap">
-        <img id="logo" src="/img/fog-logo.svg" />
+    <div id="">
+        <img id="logo" class="fogLogo" src="/img/fog-logo.svg" />
+        <img id="logo-green" class="fogLogo" src="/img/fog-logo.svg" />
     </div>
 
-    <!--<script type="application/javascript">-->
-    <!--</script>-->
-    <!--<script src="/js/TweenMax.min.js"></script>-->
+    <script type="application/javascript">
+        var logo = window['logo-green']
+
+        window.onscroll = function (ev) {
+            var bodyHeight = document.body.clientHeight
+            var top = document.body.scrollTop
+
+            var op = ((bodyHeight - (top * 2.6)) / bodyHeight).toFixed(3)
+
+            console.log(`Opacity: ${op}`)
+
+            logo.style.opacity = op
+        }
+    </script>
+
+    <script src="/js/TweenMax.min.js"></script>
     <script src="/build.js"></script>
   </body>
 </html>
