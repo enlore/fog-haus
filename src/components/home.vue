@@ -98,12 +98,12 @@
                     li Ameer Suhayb Carter
 
                 p
-                    a(target="_blank", href="http://fog.haus/mailto:inquiries@fog.haus?subject=General%20Inquiries") Email us for questions ↗
+                    a(target="_blank", href="mailto:inquiries@fog.haus?subject=General%20Inquiries") Email us for questions ↗
 
                 p or
 
                 p
-                    a(target="_blank", href="http://fog.haus/mailto:inquiries@fog.haus?subject=Agency Services") agency services ↗
+                    a(target="_blank", href="mailto:inquiries@fog.haus?subject=Agency%20Services") agency services ↗
 
                 p or
 
