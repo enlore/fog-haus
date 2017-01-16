@@ -84,7 +84,9 @@ $black: #000;
 }
 
 #app {
-    z-index: 1;
+    // gotta have this here so the app's content is sitting at a higher z
+    // position that the fog groups
+    position: relative;
 }
 
 #fog-1 {
