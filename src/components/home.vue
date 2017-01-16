@@ -2,7 +2,7 @@
     #home
         .copyColumn
             section
-                h1.thin.
+                h1.light.thin.
                     Business is changing. Sustainability and social innovation are at
                     the forefront, and this new age of global megacorps is rapidly
                     mutating.

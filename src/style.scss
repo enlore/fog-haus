@@ -83,6 +83,10 @@ $black: #000;
     }
 }
 
+#app {
+    z-index: 1;
+}
+
 #fog-1 {
     position: fixed;
     top: 23%;
@@ -164,6 +168,7 @@ a {
 
 h1 { color: $white; }
 h1.alt { color: $fog-green; }
+h1.light { color: $fog-lightGreen; }
 
 h2 { color: $white; }
 h2.alt { color: $fog-green; }
@@ -188,7 +193,7 @@ section.easterEgg {
 
 .copyColumn {
     //padding-top: 20%;
-    padding-left: 16px;
+    padding-left: 32px;
     padding-bottom: 128px;
     max-width: 680px;
 }
