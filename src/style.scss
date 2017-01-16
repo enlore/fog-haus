@@ -1,3 +1,40 @@
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -14,9 +51,56 @@ $black: #000;
     opacity: 0.5;
 }
 
+@include keyframes(drift-fog) {
+    $horizontalStart: -60%;
+    //$horizontalMid: 100%;
+    $horizontalEnd: 60%;
+
+    to {
+        transform: translateX($horizontalEnd);
+    }
+
+    from {
+        transform: translateX($horizontalStart);
+    }
+    //50% { left: $horizontalMid; bottom: $verticalMid; }
+}
+
+@include keyframes(drift-fog-2) {
+    $horizontalStart: -20%;
+    //$horizontalMid: 100%;
+    $horizontalEnd: 20%;
+
+    to {
+        transform: translateX($horizontalStart);
+    }
+    //50% { left: $horizontalMid; bottom: $verticalMid; }
+    from {
+        transform: translateX($horizontalEnd);
+    }
+}
+
+#fog-1 {
+    position: fixed;
+    top: 16%;
+    @include animation('drift-fog 192s infinite')
+}
+
+#fog-2 {
+    position: fixed;
+    top: 22%;
+    @include animation('drift-fog-2 124s infinite')
+}
+
+#fog-3 {
+    position: fixed;
+    top: 34%;
+}
+
 #logo {
     $top: 46%;
     $right: 6%;
+
     position: fixed;
     width: 680px;
     top: $top;
