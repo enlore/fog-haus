@@ -94,7 +94,7 @@
 
                 ul
                     li Nick Lorenson
-                    li Alexander Elliot
+                    li Alexander Elliott
                     li Ameer Suhayb Carter
 
                 p
@@ -110,7 +110,7 @@
                 p
                     a.typeform-share(data-mode="1" target="_blank", href="https://nick669.typeform.com/to/uSyTW9") fill this out
 
-                p © 2016 fog.
+                p © 2017 fog.
 
             section.easterEgg
                 h2.alt.
