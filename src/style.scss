@@ -52,44 +52,47 @@ $black: #000;
 }
 
 @include keyframes(drift-fog) {
-    $horizontalStart: -60%;
-    //$horizontalMid: 100%;
-    $horizontalEnd: 60%;
+    $horizontalStart: -100%;
+    $horizontalMid: 0px;
+    $horizontalEnd: 110%;
 
-    to {
+    0% {
+        transform: translateX($horizontalStart);
+    }
+
+    50% { transform: translateX($horizontalMid) }
+
+    100% {
         transform: translateX($horizontalEnd);
     }
-
-    from {
-        transform: translateX($horizontalStart);
-    }
-    //50% { left: $horizontalMid; bottom: $verticalMid; }
 }
 
-@include keyframes(drift-fog-2) {
-    $horizontalStart: -20%;
-    //$horizontalMid: 100%;
-    $horizontalEnd: 20%;
+@include keyframes(drift-fog-reverse) {
+    $horizontalStart: 100%;
+    $horizontalMid: 0px;
+    $horizontalEnd: -110%;
 
-    to {
+    0% {
         transform: translateX($horizontalStart);
     }
-    //50% { left: $horizontalMid; bottom: $verticalMid; }
-    from {
+
+    50% { transform: translateX($horizontalMid) }
+
+    100% {
         transform: translateX($horizontalEnd);
     }
 }
 
 #fog-1 {
     position: fixed;
-    top: 16%;
-    @include animation('drift-fog 192s infinite')
+    top: 23%;
+    @include animation('drift-fog 227s infinite')
 }
 
 #fog-2 {
     position: fixed;
-    top: 22%;
-    @include animation('drift-fog-2 124s infinite')
+    top: 16%;
+    @include animation('drift-fog-reverse 193s infinite')
 }
 
 #fog-3 {
