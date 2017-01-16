@@ -193,6 +193,11 @@ section {
     padding-bottom: $section-padding;
 }
 
+section.lead {
+    padding-top: 356px;
+    //padding-top: 66%;
+}
+
 section.easterEgg {
     padding-top: $section-padding * 2;
 }

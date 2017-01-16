@@ -2,16 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <title>fog.haus</title>
+    <meta name="description" content="fog.haus, a creative consultancy">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet"
         href="//fonts.googleapis.com/css?family=Space+Mono" >
+
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/build.css">
+
+    <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
 
   </head>
 
   <body>
+      <!--[if lte IE 9]>
+      <p class="browserupgrade"
+          style="
+          max-width: 512px;
+          margin-left: 32px;">
+          You are using an <strong>outdated</strong> browser. Please
+          <a href="http://browsehappy.com/">upgrade your browser</a> to
+          improve your experience and security.
+      </p>
+      <![endif]-->
 
     <div id="fogGroups">
         <img id="fog-1" class="fogGroup" src="/img/fog-group.png" />
@@ -21,7 +41,7 @@
 
     <div id="app"></div>
 
-    <div id="">
+    <div id="logos">
         <img id="logo" class="fogLogo" src="/img/fog-logo.svg" />
         <img id="logo-green" class="fogLogo" src="/img/fog-logo.svg" />
     </div>
@@ -35,13 +55,11 @@
 
             var op = ((bodyHeight - (top * 2.6)) / bodyHeight).toFixed(3)
 
-            console.log(`Opacity: ${op}`)
-
             logo.style.opacity = op
         }
     </script>
 
-    <script src="/js/TweenMax.min.js"></script>
+    <!--<script src="/js/TweenMax.min.js"></script>-->
     <script src="/build.js"></script>
   </body>
 </html>
