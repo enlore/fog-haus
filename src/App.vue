@@ -17,7 +17,7 @@
 </script>
 
 <style lang="scss">
-    @import 'normalize.css';
-    @import "../node_modules/susy/sass/susy";
+    //@import 'normalize.css';
+    //@import "../node_modules/susy/sass/susy";
     @import 'style.scss';
 </style>
