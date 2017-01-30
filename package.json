@@ -1,0 +1,18 @@
+{
+  "name": "service-jam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "init": "mkdir src src/pages src/styles public public/css public/img public/js",
+    "dev": "npm-run-all --parallel dev:pug dev:scss",
+    "dev:pug": "pug -P -w src/pages -o public",
+    "dev:scss": "node-sass -w src/styles -o public/css src/styles/main.scss"
+  },
+  "dependencies": {
+    "node-sass": "^4.4.0",
+    "npm-run-all": "^4.0.1",
+    "pug": "^2.0.0-beta10"
+  }
+}
