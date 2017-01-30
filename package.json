@@ -6,11 +6,13 @@
   "license": "MIT",
   "scripts": {
     "init": "mkdir src src/pages src/styles public public/css public/img public/js",
-    "dev": "npm-run-all --parallel dev:pug dev:scss",
+    "dev": "npm-run-all --parallel dev:pug dev:scss dev:serve",
+    "dev:serve": "http-server -p 8080",
     "dev:pug": "pug -P -w src/pages -o public",
     "dev:scss": "node-sass -w src/styles -o public/css src/styles/main.scss"
   },
   "dependencies": {
+    "http-server": "^0.9.0",
     "node-sass": "^4.4.0",
     "npm-run-all": "^4.0.1",
     "pug": "^2.0.0-beta10"
