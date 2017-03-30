@@ -17,6 +17,16 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
+@font-face {
+  font-family: "Open-Sans-Light";
+  src: url("/font/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "Space-Mono-Reg";
+  src: url("/font/SpaceMono-Regular.ttf");
+}
+
 /* Sections
    ========================================================================== */
 
