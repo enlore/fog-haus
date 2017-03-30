@@ -113,6 +113,10 @@
                 p © 2017 fog.
 
             section.easterEgg
+                mixin link-out(href, text)
+                    p(style="margin-top: 16px;")
+                        a(target="_blank", href=href)= text + " ↗ "
+
                 h2.alt.
                     By the way...
 
@@ -121,14 +125,16 @@
                     with digital products, we can provide a few things that might come in handy
                     along the way.
 
-                h3.alt.
-                    Words
+                h3.alt(style="margin-top: 32px;")  Words
+                p(style="margin-top: 16px;")  Thoughts on software, digital services, and the new wave of business.
 
-                p.
-                    Thoughts on software, digital services, and the new wave of business.
+                +link-out("https://medium.com/portfolio-of-ameer-suhayb-carter/audible-channels-daed53a4ff07#.tdcval72n", "Audible Channels - A Case Study")
+                +link-out("https://medium.com/portfolio-of-ameer-suhayb-carter/healthcare-framework-ff1fd1b9f210", "The Next Frontier in Healthcare")
 
-                p
-                    a(target="_blank", href="https://medium.com/portfolio-of-ameer-suhayb-carter/audible-channels-daed53a4ff07#.tdcval72n") Audible Channels - A Case Study ↗
+                h3.alt(style="margin-top: 48px;") Conversations
+                p(style="margin-top: 16px;") Chats with the right people in our part of the atmosphere about #[a(href="https://medium.com/fog-haus", target="_blank") the visible future].
+
+                +link-out("https://medium.com/fog-haus/jurnell-cockhren-of-sophicware-and-the-age-of-communal-empowerment-through-software-87864d60edcf", "Interview: the Age of Communal Empowerment Through Software")
 </template>
 
 <script>
