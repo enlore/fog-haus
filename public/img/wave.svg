@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="194px" height="194px" viewBox="0 0 194 194" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>wave</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="76.1746873%" id="radialGradient-1">
+            <stop stop-color="#353F45" offset="0%"></stop>
+            <stop stop-color="#4A5963" stop-opacity="0.620414402" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="57.2629006%" id="radialGradient-2">
+            <stop stop-color="#353F45" offset="0%"></stop>
+            <stop stop-color="#4A5963" stop-opacity="0.620414402" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="34.5122452%" id="radialGradient-3">
+            <stop stop-color="#353F45" offset="0%"></stop>
+            <stop stop-color="#4A5963" stop-opacity="0.620414402" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Website-Change" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-338.000000, -3455.000000)">
+            <g id="wave" transform="translate(338.000000, 3455.000000)">
+                <circle id="Oval" fill="url(#radialGradient-1)" cx="97" cy="97" r="97"></circle>
+                <circle id="Oval" fill="url(#radialGradient-2)" cx="97" cy="97" r="75"></circle>
+                <circle id="Oval" fill="url(#radialGradient-3)" cx="97.5" cy="97.5" r="52.5"></circle>
+                <polygon id="Triangle-2-Copy-4" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(91.145027, 97.573532) rotate(250.000000) translate(-91.145027, -97.573532) " points="83.2769818 80.5999113 112.181918 111.425376 70.1081352 114.547153 85.7713076 101.8127"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

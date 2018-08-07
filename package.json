@@ -7,7 +7,7 @@
   "scripts": {
     "init": "mkdir src src/pages src/styles public public/css public/img public/js",
     "dev": "npm-run-all --parallel dev:pug dev:scss dev:serve",
-    "dev:serve": "http-server -p 8080",
+    "dev:serve": "http-server -p 8081",
     "dev:pug": "pug -P -w src/pages -o public",
     "dev:scss": "node-sass -o public/css src/styles/main.scss; node-sass -w src/styles -o public/css src/styles/main.scss"
   },

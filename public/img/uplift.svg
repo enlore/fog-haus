@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="183px" height="294px" viewBox="0 0 183 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>uplift</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="1.0801977%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4B5B65" offset="0%"></stop>
+            <stop stop-color="#4D5C66" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website-Change" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-328.000000, -2641.000000)">
+            <g id="uplift" transform="translate(319.000000, 2646.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="85" y="37" width="33" height="252"></rect>
+                <rect id="Rectangle-Copy" fill="url(#linearGradient-1)" x="143" y="93" width="33" height="196"></rect>
+                <rect id="Rectangle-Copy-2" fill="url(#linearGradient-1)" x="27" y="129" width="33" height="160"></rect>
+                <polygon id="Triangle-2-Copy" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(92.814658, 37.360951) rotate(250.000000) translate(-92.814658, -37.360951) " points="81.3954728 12.5618859 123.473997 57.5434409 62.1553183 62.1600168 85.0397719 43.554527"></polygon>
+                <polygon id="Triangle-2-Copy-2" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(151.815710, 98.363843) rotate(250.000000) translate(-151.815710, -98.363843) " points="140.320215 73.5647771 182.551359 118.601881 121.080061 123.162908 143.964514 104.557418"></polygon>
+                <polygon id="Triangle-2-Copy-3" stroke="#728490" stroke-width="5" fill="#728490" transform="translate(34.770174, 125.238733) rotate(250.000000) translate(-34.770174, -125.238733) " points="23.2209264 100.439667 65.5595754 145.5159 3.98077183 150.037798 26.8652255 131.432308"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

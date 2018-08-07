@@ -1,0 +1,281 @@
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+$fog-grey: #465057;
+
+$fog-lightGreen: #D7F9F1;
+$fog-green: #50E3C2;
+
+$white: #fff;
+$black: #000;
+
+@include keyframes(drift-fog) {
+    $horizontalStart: -100%;
+    $horizontalMid: 0px;
+    $horizontalEnd: 110%;
+
+    0% {
+        transform: translateX($horizontalStart);
+    }
+
+    50% { transform: translateX($horizontalMid) }
+
+    100% {
+        transform: translateX($horizontalEnd);
+    }
+}
+
+@include keyframes(drift-fog-reverse) {
+    $horizontalStart: 100%;
+    $horizontalMid: 0px;
+    $horizontalEnd: -110%;
+
+    0% {
+        transform: translateX($horizontalStart);
+    }
+
+    50% { transform: translateX($horizontalMid) }
+
+    100% {
+        transform: translateX($horizontalEnd);
+    }
+}
+
+#app {
+    // gotta have this here so the app's content is sitting at a higher z
+    // position that the fog groups
+    position: relative;
+}
+
+#fog-1 {
+    position: fixed;
+    top: 23%;
+    @include animation('drift-fog 227s infinite')
+}
+
+#fog-2 {
+    position: fixed;
+    top: 16%;
+    @include animation('drift-fog-reverse 193s infinite')
+}
+
+#fog-3 {
+    position: fixed;
+    top: 34%;
+}
+
+#logo {
+    opacity: 0.3;
+}
+
+#logos {
+    padding: 32px 32px 0;
+}
+
+#logo {
+    display: none;
+}
+
+.fogLogo {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    #logos {
+        padding: 0;
+    }
+
+    #logo {
+        display: block;
+    }
+
+    .fogLogo {
+        $top: 46%;
+        $right: 2%;
+
+        position: fixed;
+        width: 490px;
+        top: $top;
+        right: $right;
+        transform: translateY(-($top/2)) translateX(-($right/2));
+    }
+}
+
+@media (min-width: 1430px) {
+    .fogLogo {
+        width: 680px;
+    }
+}
+
+html, body {
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    background-color: $fog-grey;
+    background-image: url('/img/dark-gradient-slice.png');
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    //background-image: url('/img/fog-logo.svg')
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: 'Space Mono';
+}
+
+h1.font-alt {
+    font-family: 'Space Mono';
+}
+
+p {
+    font-weight: 300;
+    margin-top: 64px;
+}
+
+h1 { font-size: 55px; }
+h2 { font-size: 47.5px; }
+h3 { font-size: 40px; }
+p,
+li { font-size: 35px; }
+a  { font-size: 30px; }
+
+ul { list-style: none; }
+
+a {
+    color: $fog-green;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 { color: $white; }
+h1.alt { color: $fog-green; }
+h1.light { color: $fog-lightGreen; }
+
+h2 { color: $white; }
+h2.alt { color: $fog-green; }
+
+h3 { color: $white; }
+h3.alt { color: $fog-green; }
+
+.thin  { font-weight: 300; }
+.thick { font-weight: 400; }
+.fat { font-weight: 500; }
+
+$section-padding: 256px;
+
+section {
+    padding-top: $section-padding / 2;
+    padding-bottom: $section-padding / 2;
+}
+
+section.lead {
+    padding-top: 126px;
+}
+
+@media (min-width: 1200px) {
+    section {
+        padding-top: $section-padding;
+        padding-bottom: $section-padding;
+    }
+
+    section.lead {
+        padding-top: 356px;
+        //padding-top: 66%;
+    }
+}
+
+section.easterEgg {
+    padding-top: $section-padding * 2;
+}
+
+.copyColumn {
+    //padding-top: 20%;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 128px;
+    max-width: 680px;
+}
+
+.serviceBlock:last-child {
+    padding-bottom: 0;
+}
+
+.serviceBlock {
+    padding-bottom: 128px;
+}
+
+.serviceIcon {
+    margin-bottom: 16px;
+}
+
+.u-centerBlock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-imgResp {
+    display: block;
+    max-width: 100%;
+}
+
+.u-textCenter {
+    text-align: center;
+}
+
+.icon-inline {
+  max-width: 25px;
+  display: inline-block;
+  position: relative;
+  top: -12px;
+}

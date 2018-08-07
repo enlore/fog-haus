@@ -3,15 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Bananas</title>
-    <meta name="description" content="">
+    <title>fog.haus</title>
+    <meta name="description" content="fog.haus, a consultancy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link(rel="apple-touch-icon" href="apple-touch-icon.png")-->
     <!-- Uncomment the following as needed-->
-    <!--link(rel="stylesheet" href="/css/normalize.css")-->
-    <!--link(rel="stylesheet" href="/css/grid.css")-->
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
-    <!--script(src="js/vendor/modernizr-2.8.3.min.js")-->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Space+Mono">
+    <style>
+      .pace {
+          -webkit-pointer-events: none;
+          pointer-events: none;
+      
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+      }
+      
+      .pace-inactive {
+          display: none;
+      }
+      
+      .pace .pace-progress {
+          background: #29d;
+          position: fixed;
+          z-index: 2000;
+          top: 0;
+          right: 100%;
+          width: 100%;
+          height: 2px;
+      }
+      
+    </style>
+    <script src="/js/pace.min.js" type="application/javascript"></script>
   </head>
   <body>
     <!--
@@ -20,7 +45,119 @@
     <![endif]
     
     -->
-    <h1>This is the song that never ends</h1>
+    <div class="page">
+      <div id="logos"><img class="fogLogo" id="logo" src="/img/fog-logo.svg"><img class="fogLogo" id="logo-green" src="/img/fog-logo.svg"></div>
+      <div id="fogGroups"><img class="fogGroup" id="fog-1" src="/img/fog-group.png"><img class="fogGroup" id="fog-2" src="/img/fog-group-2.png"><img class="fogGroup" id="fog-3" src="/img/fog-group-3.png"></div>
+      <div id="home">
+        <div class="copyColumn">
+          <section class="lead">
+            <h1 class="light thin">
+              Business is changing. Sustainability, social innovation, a
+              tech savvy mentality, and machine intelligence are the new
+              norms. The landscape of society is rapidly mutating.
+              
+            </h1>
+          </section>
+          <section>
+            <h1 class="font-alt alt">
+              We like that.
+              
+            </h1>
+            <p>
+              We understand that the new consumer is more demanding and savvier than
+              big companies are willing to admit. We understand that being competitive
+              means having more knowledge sooner. We understand the value of digital
+              transformation, and we're lean and smart enough to actually get it done.
+              
+            </p>
+            <p>
+              We’re just like you. We’re consumers and we’re business
+              owners. We're demanding. We support socially conscious
+              products. We understand that no one's going to build the
+              future we want for us.
+              
+            </p>
+            <p>
+              We started fog to do just that.
+              
+            </p>
+            <p>
+              Here’s how we do it.
+              
+            </p>
+          </section>
+          <section>
+            <div class="serviceBlock"><img class="serviceIcon u-imgResp u-centerBlock" src="/img/tail.svg">
+              <h2 class="alt u-textCenter">
+                A Lean Approach
+                
+              </h2>
+              <p>
+                We'll help you validate your concept, test your product, and
+                ensure that you aren't falling into the trap of building for
+                its own sake.
+                
+                
+              </p>
+            </div>
+            <div class="serviceBlock"><img class="serviceIcon u-imgResp u-centerBlock" src="/img/uplift.svg">
+              <h2 class="alt u-textCenter">
+                Flexible, Scalable Output
+                
+              </h2>
+              <p>
+                What you need, when you need it. Do you build or buy? What happens
+                when your first 1,000 customers have signed up? Your first 10,000?
+                We're here to guide you through the process, enabling your team to
+                focus on what matters most to your business.
+                
+                
+              </p>
+            </div>
+            <div class="serviceBlock"><img class="serviceIcon u-imgResp u-centerBlock" src="/img/wave.svg">
+              <h2 class="alt u-textCenter">
+                Digital Transformation
+                
+              </h2>
+              <p>
+                Sometimes you need to set old things aside and embrace what's
+                coming. We'll help you understand the needs of your organization
+                on a technical and humane level, create a blueprint for your
+                evolution, and ensure proper execution.
+                
+                
+              </p>
+            </div>
+            <div class="serviceBlock"><img class="serviceIcon u-imgResp u-centerBlock" src="/img/responsive-sizes.svg">
+              <h2 class="alt u-textCenter">
+                Actionable Insight
+                
+              </h2>
+              <p>
+                Without a clear understanding of your own operation,
+                you'll never know for sure if you're succeeding or if
+                destruction is right around the corner. We'll work with you
+                to generate actionable insights about your organization and
+                outfit you with the tools you need to make the best decisions.
+                
+                
+              </p>
+            </div>
+          </section>
+          <section>
+            <h2 class="alt">
+              You like that? Get in touch.
+              
+            </h2>
+            <p>If you like what you’ve been reading <a target="_blank" href="mailto:inquiries@fog.haus?subject=Hello">reach out <img class="icon-inline" src="/img/icon-envelope.svg"></a> and we'll start a conversation.
+              
+              
+            </p>
+            <p>© 2018 fog.haus</p>
+          </section>
+        </div>
+      </div>
+    </div>
     <!--script(src="js/main.js")-->
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.-->
     <script> window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date; ga('create','UA-XXXXX-Y','auto');ga('send','pageview')</script>
