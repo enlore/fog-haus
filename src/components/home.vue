@@ -3,29 +3,28 @@
         .copyColumn
             section.lead
                 h1.light.thin.
-                    Business is changing. Sustainability and social innovation are at
-                    the forefront, and this new age of global megacorps is rapidly
-                    mutating.
+                  Business is changing. Sustainability, social innovation, a
+                  tech savvy mentality, and machine intelligence are the new
+                  norms. The landscape of society is rapidly mutating.
 
             section
                 h1.font-alt.alt.
                     We like that.
 
                 p.
-                    At fog, we understand that the new consumer is more demanding and savvier than
-                    big companies are willing to admit. They want products with impact, that are
-                    forward thinking, and culturally-relevant. They're smart, capable, and worth
-                    knowing. They demand to be treated like humans.
+                    We understand that the new consumer is more demanding and savvier than
+                    big companies are willing to admit. We understand that being competitive
+                    means having more knowledge sooner. We understand the value of digital
+                    transformation, and we're lean and smart enough to actually get it done.
 
                 p.
-                    And we know that demand will only intensify. Why? We’re just like you. We’re
-                    consumers and we’re business owners. We're demanding. We support socially
-                    conscious products. We understand that no one's going to build the future we
-                    want for us. We’ve helped companies and cool individuals launch, grow, and
-                    generate revenue while empowering their users to live better lives.
+                    We’re just like you. We’re consumers and we’re business
+                    owners. We're demanding. We support socially conscious
+                    products. We understand that no one's going to build the
+                    future we want for us.
 
                 p.
-                    We started fog to do more of that.
+                    We started fog to do just that.
 
                 p.
                     Here’s how we do it.
@@ -34,107 +33,64 @@
                 .serviceBlock
                     img.serviceIcon.u-imgResp.u-centerBlock(src="/img/tail.svg")
                     h2.alt.u-textCenter.
-                        Idea Validation
+                      A Lean Approach
 
                     p.
-                        Need an investor, or are you applying for an accelerator to push and fund your
-                        idea? We help you visualize your idea into a tangible design that refines your
-                        concept, establishes business need, and outfits you wireframes and art
-                        direction to help you make your pitch.
+                      We'll help you validate your concept, test your product, and
+                      ensure that you aren't falling into the trap of building for
+                      its own sake.
+
 
                 .serviceBlock
                     img.serviceIcon.u-imgResp.u-centerBlock(src="/img/uplift.svg")
                     h2.alt.u-textCenter.
-                        Venture Development
+                      Flexible, Scalable Output
 
                     p.
-                        You’ve said to yourself, “This is it! I’ve got the idea that will radically
-                        change ____!” Hold up. Before you spend an exorbitant fee on getting your idea
-                        developed, think about the risk involved. Partner with us to build your MVP and
-                        reduce your initial overhead in exchange for an equity stake. Share the burden
-                        of launching a successful venture and gain access to a team of co-founders
-                        packed with nearly a decade of startup experience.
+                      What you need, when you need it. Do you build or buy? What happens
+                      when your first 1,000 customers have signed up? Your first 10,000?
+                      We're here to guide you through the process, enabling your team to
+                      focus on what matters most to your business.
 
 
                 .serviceBlock
                     img.serviceIcon.u-imgResp.u-centerBlock(src="/img/wave.svg")
                     h2.alt.u-textCenter.
-                        The Retainer
+                      Digital Transformation
 
                     p.
-                        When your needs are recurring (and, as they so often are, unpredictable), you
-                        need good people on call. You need design or development help ASAP? Problem
-                        solving? Firefighting? Consulting and training? We got you covered. As your
-                        partner, our flexible workflow helps bolster your internal team or gives you
-                        the extra kick you need when working with outsourced talent.
+                      Sometimes you need to set old things aside and embrace what's
+                      coming. We'll help you understand the needs of your organization
+                      on a technical and humane level, create a blueprint for your
+                      evolution, and ensure proper execution.
+
 
                 .serviceBlock
                     img.serviceIcon.u-imgResp.u-centerBlock(src="/img/responsive-sizes.svg")
                     h2.alt.u-textCenter.
-                        Your Project
+                      Actionable Insight
 
                     p.
-                        “I need a website.” “I need branding.” “I need an app.” We’ve heard them all
-                        and we know how to help you. This is where we ask you a ton of questions,
-                        figure out your goals, define the scope, create & refine a concept, design the
-                        hell out of it, and develop it. Or any combination. You will be happy, and your
-                        users will thank you. You’re welcome.
+                      Without a clear understanding of your own operation,
+                      you'll never know for sure if you're succeeding or if
+                      destruction is right around the corner. We'll work with you
+                      to generate actionable insights about your organization and
+                      outfit you with the tools you need to make the best decisions.
+
 
             section
                 h2.alt.
-                    You like that?  Get in touch.
+                    You like that? Get in touch.
 
                 p.
                     Currently, we’re working on a few projects. If you like what you’ve been
-                    reading, well, you ought to shoot us a line and we'll get a conversation
-                    started.
-
-                h3.
-                    the fog team
-
-                ul
-                    li Nick Lorenson
-                    li Alexander Elliott
-                    li Ameer Suhayb Carter
+                    reading reach out and we'll start a conversation.
 
                 p
                     a(target="_blank", href="mailto:inquiries@fog.haus?subject=General%20Inquiries") Email us for questions ↗
 
-                p or
 
-                p
-                    a(target="_blank", href="mailto:inquiries@fog.haus?subject=Agency%20Services") agency services ↗
-
-                p or
-
-                p
-                    a.typeform-share(data-mode="1" target="_blank", href="https://nick669.typeform.com/to/uSyTW9") fill this out
-
-                p © 2017 fog.
-
-            section.easterEgg
-                mixin link-out(href, text)
-                    p(style="margin-top: 16px;")
-                        a(target="_blank", href=href)= text + " ↗ "
-
-                h2.alt.
-                    By the way...
-
-                p.
-                    Ideas or no ideas, if you’re interested in journeying into entrepreneurship
-                    with digital products, we can provide a few things that might come in handy
-                    along the way.
-
-                h3.alt(style="margin-top: 32px;")  Words
-                p(style="margin-top: 16px;")  Thoughts on software, digital services, and the new wave of business.
-
-                +link-out("https://medium.com/portfolio-of-ameer-suhayb-carter/audible-channels-daed53a4ff07#.tdcval72n", "Audible Channels - A Case Study")
-                +link-out("https://medium.com/portfolio-of-ameer-suhayb-carter/healthcare-framework-ff1fd1b9f210", "The Next Frontier in Healthcare")
-
-                h3.alt(style="margin-top: 48px;") Conversations
-                p(style="margin-top: 16px;") Chats with the right people in our part of the atmosphere about #[a(href="https://medium.com/fog-haus", target="_blank") the visible future].
-
-                +link-out("https://medium.com/fog-haus/jurnell-cockhren-of-sophicware-and-the-age-of-communal-empowerment-through-software-87864d60edcf", "Interview: the Age of Communal Empowerment Through Software")
+                p © 2018 fog.haus
 </template>
 
 <script>
