@@ -83,11 +83,7 @@
                     You like that? Get in touch.
 
                 p.
-                    Currently, we’re working on a few projects. If you like what you’ve been
-                    reading reach out and we'll start a conversation.
-
-                p
-                    a(target="_blank", href="mailto:inquiries@fog.haus?subject=General%20Inquiries") Email us for questions ↗
+                    If you like what you’ve been reading #[a(target="_blank", href="mailto:inquiries@fog.haus?subject=Hello") reach out #[img(class="icon-inline", src="/img/icon-envelope.svg")]] and we'll start a conversation.
 
 
                 p © 2018 fog.haus
