@@ -10,7 +10,7 @@
     "dev:serve": "http-server -p 8081",
     "dev:pug": "pug -P -w src/pages -o public",
     "dev:scss": "node-sass -o public/css src/styles/main.scss; node-sass -w src/styles -o public/css src/styles/main.scss",
-    "deploy": "firebase deploy --only hosting --use fog-haus"
+    "deploy": "firebase deploy --only hosting --project fog-haus"
   },
   "dependencies": {
     "http-server": "^0.9.0",
